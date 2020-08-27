@@ -239,7 +239,8 @@ The main tasks for this exercise are as follows:
             ------------
             Subject
             ------------
-            Data Object          
+            Data Object 
+            ------------
     -   You can put these values on single lines and put \-\-\-\-- as
     separator between the values*
 
