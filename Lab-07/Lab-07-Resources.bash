@@ -69,8 +69,8 @@ az network vnet create --resource-group $RG --name $VNet02  --address-prefixes $
 az network vnet create --resource-group $RG --name $VNet03  --address-prefixes $APC --subnet-name SNC01 --subnet-prefix $SNC01
 
 # Export VNet Values
-export SUBNETID=$(az network vnet subnet show --resource-group $RG --vnet-name $VNet --name SN01 --query id -o tsv)
-export SUBNETN=$(az network vnet subnet show --resource-group $RG --vnet-name $VNet --name SN01 --query name -o tsv)
+export SUBNETID=$(az network vnet subnet show --resource-group $RG --vnet-name $VNet01 --name SNA01 --query id -o tsv)
+export SUBNETN=$(az network vnet subnet show --resource-group $RG --vnet-name $VNet01 --name SNA01 --query name -o tsv)
 
 # Assign NSG to Subnet
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN --network-security-group $Nsg
