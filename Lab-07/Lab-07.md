@@ -5,7 +5,7 @@ ls -la Lab-12a-SetUp.bash
 
 chmod +x Lab-07-Resources.bash
 
-./Lab-12a-SetUp.bash
+./Lab-07-Resources.bash
 
 #
 
