@@ -73,9 +73,9 @@ export SUBNETID=$(az network vnet subnet show --resource-group $RG --vnet-name $
 export SUBNETN=$(az network vnet subnet show --resource-group $RG --vnet-name $VNet01 --name SNA01 --query name -o tsv)
 
 # Assign NSG to Subnet
-az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN --network-security-group $Nsg
+az network vnet subnet update -g $RG --vnet-name $VNet01 -n $SUBNETN --network-security-group $Nsg
 
 # Create VM
-az vm create --resource-group $RG -n $VM01 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip01 --public-ip-address-allocation static --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg ""
-az vm create --resource-group $RG -n $VM02 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip02 --public-ip-address-allocation static --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg ""
+az vm create --resource-group $RG -n $VM01 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip01 --public-ip-address-allocation static --subnet $SUBNETID --boot-diagnostics-storage $F --license-type Windows_Server --nsg "" --no-wait
+az vm create --resource-group $RG -n $VM02 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip02 --public-ip-address-allocation static --subnet $SUBNETID --boot-diagnostics-storage $F --license-type Windows_Server --nsg ""
 
