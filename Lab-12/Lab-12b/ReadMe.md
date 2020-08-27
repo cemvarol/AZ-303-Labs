@@ -1,1 +1,1 @@
-sada
+## Simplified Content for AZ-303 Lab-12b
