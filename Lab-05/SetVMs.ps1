@@ -7,5 +7,6 @@ Invoke-WebRequest -Uri $url1 -OutFile $output1
 
 Start-Sleep -s 3
 
-Invoke-WebRequest -Uri $url1 -OutFile $output1
+Start-Process Powershell.exe -Argumentlist "-file $output1"
+
 
