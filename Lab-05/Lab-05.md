@@ -351,7 +351,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Azure Storage file share
 
-1.  In the browser window on the remote server, navigate back to the **container01** blade.
+1.  In the browser window on the remote server, navigate to the **storage account**.
 
 2.  On the overview page select **File shares**.
 
