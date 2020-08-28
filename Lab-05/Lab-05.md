@@ -357,7 +357,7 @@ The main tasks for this exercise are as follows:
 
 3.  Select **+ File share** and create a file share with the following settings:
 
-> Name: **Share01** Quota: **1GiB**
+> Name: **share01** Quota: **1GiB**
 
 #### Task 2: Map a drive to an Azure Storage file share from Windows
 
