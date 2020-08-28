@@ -1,2 +1,1 @@
-
-## Simplified Content for AZ-303 Lab-12a
+[AZ-303 HomePage](https://github.com/cemvarol/AZ-303-Labs)
