@@ -492,4 +492,4 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
    ```sh
    az group list --query "[?contains(name,'Lab-05')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
-> Note: If you have completed the last task, the Owner may have deleted the Resource Group already.
+> Note: The Remote Computer you have been using during this lab will be automatically deleted
