@@ -50,7 +50,7 @@ including:
 
 -   Using Service Endpoints
 
-**Objectives**
+## Objectives
 
 After completing this lab, you will be able to:
 
@@ -66,17 +66,17 @@ After completing this lab, you will be able to:
 -   Implement authorization of Azure Storage account by leveraging
     Service Endpoints.
 
-**Lab Environment**
+## Lab Environment
 
 Estimated Time: 45 minutes
 
-**Exercise 0: Prepare the lab environment**
+### Exercise 0: Prepare the lab environment
 
 The main tasks for this exercise are as follows:
 
 1.  Deploy Azure VMs and Virtual Networks
 
-**Task 1: Deploy Azure VMs and Virtual Networks**
+#### Task 1: Deploy Azure VMs and Virtual Networks
 
 1.  Start a web browser, navigate to the [[Azure
     portal]{.ul}](https://portal.azure.com/), and sign in.
@@ -104,8 +104,7 @@ to the next exercise. The deployment should take less than 5 minutes.
 
 5.  In the Azure portal, close the **Cloud Shell** pane.
 
-**Exercise 1: Configure Azure Storage account authorization by using
-shared access signature.**
+### Exercise 1: Configure Azure Storage account authorization by using shared access signature.
 
 The main tasks for this exercise are as follows:
 
@@ -121,7 +120,7 @@ The main tasks for this exercise are as follows:
 
 6.  Access a blob by using a blob-level shared access signature
 
-**Task 1: Create an Azure Storage accounts**
+#### Task 1: Create an Azure Storage accounts
 
 1.  In the Azure portal, select **+ Add** and search for and
     select **Storage Accounts** 
@@ -152,7 +151,7 @@ The main tasks for this exercise are as follows:
 > **Note**: Wait for the Storage account to be created. This should take
 > about 2 minutes.
 
-**Task 2: Configure VM**
+#### Task 2: Configure VM
 
 **Note**: Ensure that the deployment of the Azure VM you initiated at
 the beginning of this lab has completed before you proceed.
@@ -179,7 +178,7 @@ Invoke-WebRequest -Uri \$url1 -OutFile \$output1\
 Start-Sleep -s 3\
 Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
 
-**Task 3: Generate an account-level shared access signature**
+#### Task 3: Generate an account-level shared access signature
 
 1.  Sign in to Azure Portal on Chrome.
 
@@ -210,7 +209,7 @@ Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
 
 6.  Note the value of **Blob service SAS URL** into Clipboard.
 
-**Task 4: Create a blob container by using Azure Storage Explorer**
+#### Task 4: Create a blob container by using Azure Storage Explorer
 
 1.  Navigate to the download page of [[Azure Storage
     Explorer]{.ul}](https://download.microsoft.com/download/A/E/3/AE32C485-B62B-4437-92F7-8B6B2C48CB40/StorageExplorer.exe)
@@ -248,7 +247,7 @@ Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
 
 11. Leave the Azure Storage Explorer window open.
 
-**Task 5: Upload a file to a blob container by using AzCopy**
+#### Task 5: Upload a file to a blob container by using AzCopy
 
 1.  Download [AzCopy](https://aka.ms/downloadazcopy-v10-windows) onto
     your remote computer.
@@ -315,7 +314,7 @@ Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
 
 17. Close the PowerShell window.
 
-**Task 6: Access a blob by using a blob-level shared access signature**
+#### Task 6: Access a blob by using a blob-level shared access signature
 
 1.  On the browser window, under **container01**, click **Change access
     level**, verify that is set to **Private (no anonymous access)**,
@@ -341,7 +340,7 @@ Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
 
 **Note**: More options are available E.g Allowed IP address...
 
-**Exercise 2: Implement Azure Files**
+### Exercise 2: Implement Azure Files
 
 The main tasks for this exercise are as follows:
 
@@ -349,7 +348,7 @@ The main tasks for this exercise are as follows:
 
 2.  Map a drive to an Azure Storage file share from Windows
 
-**Task 1: Create an Azure Storage file share**
+#### Task 1: Create an Azure Storage file share
 
 1.  In the browser window on the remote server, navigate back to the \
     **container01** blade.
@@ -361,7 +360,7 @@ The main tasks for this exercise are as follows:
 
 > Name: **Share01** Quota: **1GiB**
 
-**Task 2: Map a drive to an Azure Storage file share from Windows**
+#### Task 2: Map a drive to an Azure Storage file share from Windows
 
 1.  Select the newly created file share and select **Connect**.
 
@@ -392,7 +391,7 @@ The main tasks for this exercise are as follows:
 8.  Select **Folder1** and verify that **File1.txt** appears in the list
     of files.
 
-**Exercise 3: Service Endpoints**
+### Exercise 3: Service Endpoints
 
 The main tasks for this exercise are as follows:
 
@@ -402,7 +401,7 @@ The main tasks for this exercise are as follows:
 
 3.  Test the Storage Endpoints Access from L05-VM02
 
-**Task 1: Assign Service Endpoints**
+#### *Task 1: Assign Service Endpoints
 
 1.  On the remote machine, Navigate to Storage Account
 
@@ -426,7 +425,7 @@ The main tasks for this exercise are as follows:
 
     -   Click **Save**
 
-**Task 2: Test the Storage Endpoints Access from L05-VM01**
+#### Task 2: Test the Storage Endpoints Access from L05-VM01
 
 1.  Click **Overview** and click **Containers**
 
@@ -442,7 +441,7 @@ The main tasks for this exercise are as follows:
 Storage Account content within the internal connections from Azure
 resources.
 
-**Task 3: Test the Storage Endpoints Access from L05-VM02**
+#### Task 3: Test the Storage Endpoints Access from L05-VM02
 
 1.  In the Azure portal, search for and select **Virtual machines**,
     and, select **L05-VM02**.
