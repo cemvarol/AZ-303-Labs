@@ -78,8 +78,8 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Deploy Azure VMs and Virtual Networks
 
-1.  Start a web browser, navigate to the [[Azure
-    portal]{.ul}](https://portal.azure.com/), and sign in.
+1.  Start a web browser, navigate to the [Azure
+    portal](https://portal.azure.com/), and sign in.
 
 2.  Open **Cloud Shell** pane by selecting on the toolbar icon directly
     to the right of the search textbox.
