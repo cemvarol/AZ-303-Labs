@@ -236,7 +236,7 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
     only.
 
 7.  Right-click, and select **Create Blob Container**, and create a new
-    blob container with the **container1**.
+    blob container with the **container01**.
 
 8.  Select **container1** and choose **Upload Files**,
 
