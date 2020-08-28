@@ -71,7 +71,6 @@ curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab
 ls -la Lab-07-Users.bash
 chmod +x Lab-07-Users.bash
 ./Lab-07-Users.bash
-#
    ```
 #### Task 2: Deploy Azure Resources**
 
