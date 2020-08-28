@@ -155,3 +155,4 @@ The main tasks for this exercise are as follows:
    ```sh
    az group list --query "[?contains(name,'Lab-07')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
+> Note: If you have completed the last task, the Owner may have deleted the Resource Group already.
