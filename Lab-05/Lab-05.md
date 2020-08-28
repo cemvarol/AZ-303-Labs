@@ -211,8 +211,6 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
 
 5.  Select **Generate SAS and connection string**.
 
-> **Note:** You can upload the file after enabling object option. However this will be available with the new Blob service SAS URL.
-
 6.  Note the value of **Blob service SAS URL** onto a notepad.
 
 #### Task 4: Create a blob container by using Azure Storage Explorer
@@ -280,6 +278,7 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
     | Allowed protocols | **HTTPS only** |
     | Signing key | **key1** |
 
+> **Note:** Enabling Object option will allow to upload files, remember the previous task. However this will be available with the new Blob service SAS URL. So you will need to remove the previous connection and add with the new Blob Service URL
 
 7.  Click **Generate SAS and connection string**.
 
