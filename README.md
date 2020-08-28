@@ -1,3 +1,9 @@
 #### Simplified Content for AZ-303 Labs
 
-[Click for Lab5](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-05/Lab-05.md)
+[Click for Lab05](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-05/Lab-05.md)
+
+
+[Click for Lab07](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-07/Lab-07.md)
+
+
+[Click for Lab12-a](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-07/Lab-07.md)
