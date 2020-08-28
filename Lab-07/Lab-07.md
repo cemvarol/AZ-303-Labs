@@ -72,7 +72,7 @@ ls -la Lab-07-Users.bash
 chmod +x Lab-07-Users.bash
 ./Lab-07-Users.bash
    ```
-#### Task 2: Deploy Azure Resources**
+#### Task 2: Deploy Azure Resources
 
 1.  In the Azure portal, open **Cloud Shell** pane by selecting on the
     toolbar icon directly to the right of the search textbox, OR visit
