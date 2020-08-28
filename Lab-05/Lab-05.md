@@ -238,7 +238,7 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
 7.  Right-click, and select **Create Blob Container**, and create a new
     blob container with the name **container01**.
 
-8.  Select **container1** and choose **Upload Files**,
+8.  Select **container01** and choose **Upload Files**,
 
 9.  Select the ellipsis button and select **C:\\Windows\\system.ini**
     and click **Upload**
