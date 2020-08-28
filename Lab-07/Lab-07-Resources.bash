@@ -40,7 +40,7 @@ az group create --name $RG --location $L
 az sql server create -l $L -g $RG -n $D -u $user -p $pass
 
 # Create DB 
-az sql db create -g $RG -s $D -n partsunlimited --service-objective S0
+az sql db create -g $RG -s $D -n db01 --service-objective S0
 
 az sql server firewall-rule create \
     --resource-group $RG \
