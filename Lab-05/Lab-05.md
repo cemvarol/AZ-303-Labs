@@ -98,7 +98,7 @@ chmod +x Lab-05-Resources.bash
 
 > **Note**: Do not wait for the deployment to complete but instead proceed
 to the next exercise. 
-The deployment should take less than 5 minutes.
+>The deployment should take less than 5 minutes.
 
 5.  In the Azure portal, close the **Cloud Shell** pane.
 
@@ -180,7 +180,7 @@ Invoke-WebRequest -Uri $url1 -OutFile $output1
 Start-Sleep -s 3
 Start-Process Powershell.exe -Argumentlist "-file $output1"
    ```
-> #### IMPORTANT NOTE: Please do the rest of the exercises on this remote Machine 
+ #### IMPORTANT NOTE: Please do the rest of the exercises on this remote Machine 
 
 #### Task 3: Generate an account-level shared access signature
 
