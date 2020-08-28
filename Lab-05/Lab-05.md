@@ -135,7 +135,7 @@ The main tasks for this exercise are as follows:
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **AZ-303Lab-05** |
     | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
-    | Location | **East Us*  |
+    | Location | **East Us**  |
     | Performance | **Standard** |
     | Account kind | **StorageV2 (general purpose v2)** |
     | Replication | **Locally redundant storage (LRS)** |
@@ -173,14 +173,15 @@ the beginning of this lab has completed before you proceed.
 4.  Within the RDP session to **L05-VM01**, run the command on
     PowerShell console.
 
-cd\\\
-mkdir SC\
-\$url1 =
-\"https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-05/VMSetting.ps1\"\
-\$output1 = \"C:\\SC\\VMSetting.ps1\"\
-Invoke-WebRequest -Uri \$url1 -OutFile \$output1\
-Start-Sleep -s 3\
-Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
+ ```powershell
+cd\
+mkdir SC
+$url1 = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-05/VMSetting.ps1"
+$output1 = "C:\SC\VMSetting.ps1"
+Invoke-WebRequest -Uri $url1 -OutFile $output1
+Start-Sleep -s 3
+Start-Process Powershell.exe -Argumentlist "-file $output1"
+   ```
 
 #### Task 3: Generate an account-level shared access signature
 
@@ -197,17 +198,17 @@ Start-Process Powershell.exe -Argumentlist \"-file \$output1\"
 
 4.  Specify the following settings (leave others with their default
     values):
-
-  **Setting**                   **Value**
-  ----------------------------- ------------------------------------------------------------
-  Allowed services              **Blob**
-  Allowed resource types        **Service** and **Container**
-  Allowed permissions           **Read**, **List** and **Create**
-  Blob versioning permissions   disabled (uncheck the box)
-  Start                         24 hours before the current time in your current time zone
-  End                           24 hours after the current time in your current time zone
-  Allowed protocols             **HTTPS only**
-  Signing key                   **key1**
+    
+    | Setting | Value | 
+    | --- | --- |
+    | Allowed services | **Blob** |
+    | Allowed resource types | **Service** and **Container** |
+    | Allowed permissions | **Read**, **List** and **Create** |
+    | Blob versioning permissions | disabled (uncheck the box) |
+    | Start | 24 hours before the current time in your current time zone | 
+    | End | 24 hours after the current time in your current time zone |
+    | Allowed protocols | **HTTPS only** |
+    | Signing key | **key1** |
 
 5.  Select **Generate SAS and connection string**.
 
