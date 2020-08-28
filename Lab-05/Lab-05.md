@@ -180,6 +180,7 @@ Invoke-WebRequest -Uri $url1 -OutFile $output1
 Start-Sleep -s 3
 Start-Process Powershell.exe -Argumentlist "-file $output1"
    ```
+> #### IMPORTANT NOTE: Please do the rest of the exercises on this remote Machine 
 
 #### Task 3: Generate an account-level shared access signature
 
