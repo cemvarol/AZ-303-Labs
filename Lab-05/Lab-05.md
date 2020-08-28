@@ -120,7 +120,7 @@ The main tasks for this exercise are as follows:
 
 6.  Access a blob by using a blob-level shared access signature
 
-#### Task 1: Create an Azure Storage accounts
+#### Task 1: Create an Azure Storage Account
 
 1.  In the Azure portal, select **+ Add** and search for and
     select **Storage Accounts** 
@@ -129,15 +129,18 @@ The main tasks for this exercise are as follows:
     values): and Select **Next: Networking \>**
     
     
-    | **Setting | Value | **
+
+    | Setting | Value | 
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **AZ-303Lab-05** |
+    | Resource group | the name of a new resource group **az30302a-labRG** |
     | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
-    | Location | **EastUs**  |
+    | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
     | Account kind | **StorageV2 (general purpose v2)** |
     | Replication | **Locally redundant storage (LRS)** |
+
+    
 
 3.  On the **Networking** tab, accept the default options and
     select **Next: Data protection \>**
