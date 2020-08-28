@@ -213,8 +213,8 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
 
 #### Task 4: Create a blob container by using Azure Storage Explorer
 
-1.  Navigate to the download page of [[Azure Storage
-    Explorer]{.ul}](https://download.microsoft.com/download/A/E/3/AE32C485-B62B-4437-92F7-8B6B2C48CB40/StorageExplorer.exe)
+1.  Navigate to the download page of [Azure Storage
+    Explorer](https://download.microsoft.com/download/A/E/3/AE32C485-B62B-4437-92F7-8B6B2C48CB40/StorageExplorer.exe)
 
 2.  Install Azure Storage Explorer with the default settings.
 
