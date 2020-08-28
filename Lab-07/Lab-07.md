@@ -91,10 +91,12 @@ chmod +x Lab-07-Resources.bash
 ```
 
 > **Note**: After finishing this exercise, you will have these resources
-> and users created. Check the list down BELOW. Resources.
+> and users created. Check the list down below for the Resources.
 >
 > You do not need to wait for the deployment to complete. Proceed to the
 > next task. The deployment should take approximately 5-7 minutes.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab-07-Resourcess.png)
 
 ### Exercise 1: Assign and test RBAC roles
 
@@ -118,7 +120,9 @@ The main tasks for this exercise are as follows:
     settings (leave others with their existing values) and
     select **Save**:
 
-5.  Check for the table BELOW for Roles
+5.  Check for the table below for the Roles
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab-07-Roles.png)
 
 #### Task 2: Test the RBAC role assignment
 
@@ -126,7 +130,9 @@ The main tasks for this exercise are as follows:
     portal]{.ul}](https://portal.azure.com/), and sign in by using
     the user accounts with the **1q2w3e4r5t6y** password.
 
-2.  Observe that. BELOW Tasks
+2.  Observe that. Check the table below for the tasks
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab-07-Tasks.png)
 
 > **Note**: This part is a self-drive exercise, please complete the
 > tasks above.
@@ -136,18 +142,16 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Remove Azure resources deployed in the lab
 
-1.  From the Cloud Shell pane, run the following to list the resource
-    group you created in this exercise:
+1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
 
-> az group list \--query \"\[?contains(name,\'Lab-07\')\]\".name
-> \--output tsv
->
-> **Note**: Verify that the output contains only the resource group you
-> created in this lab. This group will be deleted in this task.
+   ```sh
+   az group list --query "[?contains(name,'Lab-07')]".name --output tsv
+   ```
 
-2.  From the Cloud Shell pane, run the following to delete the resource
-    group you created in this lab
+    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
 
-> az group list \--query \"\[?contains(name,\'Lab-07\')\]\".name
-> \--output tsv \| xargs -L1 bash -c \'az group delete \--name \$0
-> \--no-wait \--yes\'
+1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
+
+   ```sh
+   az group list --query "[?contains(name,'Lab-07')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
