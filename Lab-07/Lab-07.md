@@ -106,6 +106,8 @@ The main tasks for this exercise are as follows:
 
 2.  Test the RBAC role assignment
 
+3.  Remove Azure resources deployed in the lab
+
 #### Task 1: Create an RBAC role assignment
 
 1.  In the Azure portal, navigate to the **AZ-303Lab-07** Resource
