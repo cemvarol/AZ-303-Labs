@@ -88,9 +88,6 @@ curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab
 ls -la Lab-12a-SetUp.bash
 chmod +x Lab-07-Resources.bash
 ./Lab-07-Resources.bash
-#
-
-
 ```
 
 > **Note**: After finishing this exercise, you will have these resources
