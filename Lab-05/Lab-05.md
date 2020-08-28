@@ -224,7 +224,7 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
     Storage** window, select **Use a shared access signature (SAS)
     URI** and select **Next**.
 
-4.  In the **URI** text box, paste the value you copied into Clipboard,
+4.  In the **URI** text box, paste the value you copied into Notepad,
     and select **Next**.
 
 > **Note**: You can append **-blob** to distinguish from other connections.
