@@ -211,7 +211,7 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
 
 5.  Select **Generate SAS and connection string**.
 
-6.  Note the value of **Blob service SAS URL** into Clipboard.
+6.  Note the value of **Blob service SAS URL** onto a notepad.
 
 #### Task 4: Create a blob container by using Azure Storage Explorer
 
