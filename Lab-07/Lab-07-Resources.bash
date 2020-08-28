@@ -56,7 +56,7 @@ az appservice plan create -n PU-SVC01 --sku S1 -g $RG -l $L
 az webapp create -g $RG -p PU-SVC01 -n $E
 
 # Create Storage Account
-az storage account create -n $F -g $RG --kind Storage -l $L --sku Standard_LRS --no-wait
+az storage account create -n $F -g $RG --kind Storage -l $L --sku Standard_LRS 
 az storage account create -n $G -g $RG --kind Storage -l $L --sku Standard_LRS
 
 # Create Network Security Group
@@ -65,8 +65,8 @@ az network nsg rule create -g $RG --nsg-name $Nsg -n $NsgR --priority 100 --dest
 
 # Create VNet&Subnet
 az network vnet create --resource-group $RG --name $VNet01  --address-prefixes $APA --subnet-name SNA01 --subnet-prefix $SNA01
-az network vnet create --resource-group $RG --name $VNet02  --address-prefixes $APB --subnet-name SNB01 --subnet-prefix $SNB01 --no-wait
-az network vnet create --resource-group $RG --name $VNet03  --address-prefixes $APC --subnet-name SNC01 --subnet-prefix $SNC01 --no-wait
+az network vnet create --resource-group $RG --name $VNet02  --address-prefixes $APB --subnet-name SNB01 --subnet-prefix $SNB01 
+az network vnet create --resource-group $RG --name $VNet03  --address-prefixes $APC --subnet-name SNC01 --subnet-prefix $SNC01 
 
 # Export VNet Values
 export SUBNETID=$(az network vnet subnet show --resource-group $RG --vnet-name $VNet01 --name SNA01 --query id -o tsv)
