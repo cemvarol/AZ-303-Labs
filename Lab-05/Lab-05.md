@@ -265,7 +265,7 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
     others with default values):
     
     
-        | Setting | Value | 
+    | Setting | Value | 
     | --- | --- |
     | Allowed services | **Blob** |
     | Allowed resource types | **Object** |
