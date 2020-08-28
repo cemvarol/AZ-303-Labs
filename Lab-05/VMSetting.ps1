@@ -16,7 +16,7 @@ Tzutil /s "GMT Standard Time"
 
 Set-NetFirewallProfile -Enabled False
 
-
+Start-Sleep -s 3
   
 $urlb = "https://github.com/cemvarol/AZ-Migration/blob/master/ChromeSetup.exe?raw=true"
 $outputb = "$env:USERPROFILE\downloads\ChromeSetup.exe"
