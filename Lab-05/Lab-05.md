@@ -127,16 +127,17 @@ The main tasks for this exercise are as follows:
 
 2.  Specify the following settings (leave others with their default
     values): and Select **Next: Networking \>**
-
-  **Setting**            **Value**
-  ---------------------- --------------------------------------------------------------------------------------
-  Subscription           the name of the Azure subscription you are using in this lab
-  Resource group         the name of a new resource group **AZ-303Lab-05**
-  Storage account name   any globally unique name between 3 and 24 in length consisting of letters and digits
-  Location               **EastUs**
-  Performance            **Standard**
-  Account kind           **StorageV2 (general purpose v2)**
-  Replication            **Locally redundant storage (LRS)**
+    
+    
+    | **Setting | Value | **
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource group | the name of a new resource group **AZ-303Lab-05** |
+    | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
+    | Location | **EastUs**  |
+    | Performance | **Standard** |
+    | Account kind | **StorageV2 (general purpose v2)** |
+    | Replication | **Locally redundant storage (LRS)** |
 
 3.  On the **Networking** tab, accept the default options and
     select **Next: Data protection \>**
