@@ -398,7 +398,9 @@ The main tasks for this exercise are as follows:
 
 3.  Test the Storage Endpoints Access from L05-VM02
 
-#### *Task 1: Assign Service Endpoints
+4.  Remove Azure resources deployed in the lab 
+
+#### Task 1: Assign Service Endpoints
 
 1.  On the remote machine, Navigate to Storage Account
 
@@ -472,5 +474,22 @@ Start-Process Powershell.exe -Argumentlist "-file $output1"
 8.  Ensure that you can access the Storage Account content that you
     could not access from VM01
 
-9.  You won't be able to access the Storage Account content from your
-    own computer.
+9.  Storage Account is only reachable from **L05-VM02**
+
+
+#### Task 4: Remove Azure resources deployed in the lab
+
+1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
+
+   ```sh
+   az group list --query "[?contains(name,'Lab-05')]".name --output tsv
+   ```
+
+    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
+
+1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
+
+   ```sh
+   az group list --query "[?contains(name,'Lab-05')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+> Note: If you have completed the last task, the Owner may have deleted the Resource Group already.
