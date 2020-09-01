@@ -118,7 +118,7 @@ $url = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Set
 $output = "C:\Lab09\Lab09.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
 Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
- ```
+  ```
 
 
 6.  In the Virtual Machine Connection window to **2012-R2**, on
@@ -148,7 +148,7 @@ The main tasks for this exercise are as follows:
     following settings (leave others with their default values) and
     select **Review + create**:
 
-     | Setting | Value | 
+    | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **Lab-09-Protected** |
@@ -172,7 +172,7 @@ The main tasks for this exercise are as follows:
 
 3.  Select the **Update** link under the **Backup Configuration** label.
 
-    1.  Set **Storage replication type** to **Locally-redundant**, and
+    -   Set **Storage replication type** to **Locally-redundant**, and
         select **Save** and close the **Backup Configuration** blade.
 
 > **Note**: Storage replication type cannot be changed once you start
@@ -180,7 +180,7 @@ The main tasks for this exercise are as follows:
 
 4.  Select the **Update** link under the **Security Settings** label.
 
-    1.  Set **Soft Delete** to **Disable**, and select **Save** and
+    -   Set **Soft Delete** to **Disable**, and select **Save** and
         close the **Security Settings** blade.
 
 ### Exercise 2: Implement Hyper-V protection by using Azure Site Recovery Vault
@@ -193,7 +193,7 @@ The main tasks for this exercise are as follows:
 
 3.  Remove Azure resources deployed in the lab
 
-    1.  **create** tab of the **Create storage account** blade,
+    -   **create** tab of the **Create storage account** blade,
     select **Create**.
 
 #### Task 1: Prepare Infrastructure
@@ -206,83 +206,71 @@ The main tasks for this exercise are as follows:
 
 -   Note: Your instructor should explain the other options.
 
-3.  On the **Prepare infrastructure** blade, you will have 5 steps to
-    follow
+3. On the **Prepare infrastructure** blade, you will have 5 steps to
+   follow
 
-    1.  Deployment Planning
+   1.  **Deployment Planning**
 
-        -   Choose **Yes, I have done it** and click Next
+       -   Choose **Yes, I have done it** and click Next
 
-    2.  Source Settings
+   2. **Source Settings**
 
-        -   Hyper-V Site **QA-London**
+      -   Hyper-V Site: **QA-London**
+      -   Hyper-V Servers
+          -   Add Hyper-V Server
 
-        -   Hyper-V Servers
+              -   Click download the installer to download the
+                  installer
 
-            -   Add Hyper-V Server
+              -   Click the big blue button to download the
+                  registration file
 
-                -   Click download the installer to download the
-                    installer
+          -   Launch the downloaded **AzureSiteRecoveryProvider.exe**
+              file. This will start the installation wizard.
 
-                -   Click the big blue button to download the
-                    registration file
+          -   On the Microsoft Update page, select **Off** and select
+              Next.
 
-            ```{=html}
-            <!-- -->
-            ```
-            -   Launch the downloaded **AzureSiteRecoveryProvider.exe**
-                file. This will start the installation wizard.
+          -   On the Provider installation page, select **Install**.
 
-            -   On the Microsoft Update page, select **Off** and select
-                Next.
+          -   Click **Register** when the wizard asks. Select Browse,
+              navigate to the **Downloads**, select the *vault
+              credentials file*, and click **Open**.
 
-            -   On the Provider installation page, select **Install**.
+          -   Click **Finish** when the installation completes
 
-            -   Click **Register** when the wizard asks. Select Browse,
-                navigate to the **Downloads**, select the *vault
-                credentials file*, and click **Open**.
+      ```
+      -   Your Hyper-V Server will appear on the portal after
+          installation completes
+      ```
 
-            -   Click **Finish** when the installation completes
+      > Note: If does not appear, click **Deployment Planning**, and click
+      > **next**.
 
-        ```{=html}
-        <!-- -->
-        ```
-        -   Your Hyper-V Server will appear on the portal after
-            installation completes
+   3. **Target Settings**
 
--   Note: If does not appear, click **Deployment Planning**, and click
-    **next**.
+      -   This Automatically chooses the existing subscription and checks if you have available storage account at the location. Leave with the default setting. Click **Next**.
 
-    1.  Target Settings
+   4.  **Replication Policy**
 
-        -   This Automatically chooses the existing subscription and
-            checks if you have available storage account at the
-            location. Leave with the default setting. Click **Next**.
+       - **Create new policy and associate**. (Leave default
+                 settings, ensure you assign a Name and set initial
+                 Replication as **Immediately**)
+         - Name: Provide a name e.g: **Rep-Pol**
+         - Copy Frequency
+         - Recovery point retention in hours
+         - App-Consistent snapshot frequency in hours
+         - Initial Replication start time: **Immediately**
+         - Click **Next** after completed					
 
-    2.  Replication Policy
+   5.  **Review**			
 
-        -   **Create new policy and associate**. (Leave default
-            settings, ensure you assign a Name and set initial
-            Replication as **Immediately)**
+       - Click **Prepare**	
 
-            -   Name: Provide a name e.g: **Rep-Pol**
+   6.  This will divert you back to **Protector \| Site Recovery**
+           blade. Else, navigate yourself.
 
-            -   Copy Frequency
-
-            -   Recovery point retention in hours
-
-            -   App-Consistent snapshot frequency in hours
-
-            -   Initial Replication start time: **Immediately**
-
-        -   Click **Next** after completed
-
-    3.  Review
-
-        -   Click **Prepare**
-
-    4.  This will divert you back to **Protector \| Site Recovery**
-        blade. Else, navigate yourself.
+       
 
 #### Task 2: Enable replication
 
@@ -291,56 +279,54 @@ The main tasks for this exercise are as follows:
 2.  Under **Hyper-V Machines to Azure**, section, select **Enable
     replication**.
 
-3.  On the **Enable Replication** blade, you will have 6 steps to follow
+3. On the **Enable Replication** blade, you will have 6 steps to follow
 
-    1.  Source Environment
+   1. **Source Environment**
 
-        -   Choose **QA-London** and click Next
+      - Choose **QA-London** and click Next
+            
 
-    2.  Target Environment
+   2. **Target Environment**
 
-        -   Subscription
+      - **Subscription**
+        - You can even choose a different subscription, alas it is
+              under the same **Tenancy**
 
-            -   You can even choose a different subscription, alas it is
-                under the same **Tenancy**
+      - **Post-Failover Resource Group**
+        - Choose the RG. **Lab-09-Protected** for this exercise. This menu does not allow you to create a new RG. You can
+              create on a different menu and refresh the page to see here.    
+      - **Post-failover deployment model.**
+        - Choose **Resource Manager**. This is the default setting
+      - **Storage**
+        - Choose the storage account ending with **prt01**
+      - **Network**
+        - Virtual Network: **Prt-VNet**
+        - Subnet: **SN02**
+      - Click **Next**
 
-        -   Post-Failover Resource Group
+   3. **Virtual Machine Selection** 
 
-            -   Choose the RG. **Lab-09-Protected** for this exercise.
-                This menu does not allow you to create a new RG. You can
-                create on a different menu and refresh the page to see
-                here.
+   4. **Replication Settings**
 
-        -   Post-failover deployment model.
+   5. Leave the default selected Replication Policy and click **Next** 
 
-            -   Choose **Resource Manager**. This is the default setting
+   6. Review
 
-        -   Storage
+      - Review the settings and click **Enable Replication**
 
-            -   Choose the storage account ending with **prt01**
+4. 1. **Virtual Machine Selection**
 
-        -   Network
+   -   Choose 2012-R2 and click **Next**
 
-            -   Virtual Network: **Prt-VNet**
+   4.  **Replication Settings**
 
-            -   Subnet: **SN02**
-
-        -   Click **Next**
-
-    3.  Virtual Machine Selection
-
-        -   Choose 2012-R2 and click **Next**
-
-    4.  Replication Settings
-
-        -   Choose OS Type as Windows. (this is for drivers for that OS)
+-   Choose OS Type as Windows. (this is for drivers for that OS)
             and click **Next**
-
     5.  Leave the default selected Replication Policy and click **Next**
-
-    6.  Review
-
-        -   Review the settings and click **Enable Replication**
+    
+6.  Review
+    
+    -   Review the settings and click **Enable Replication**
 
 4.  This will take approximately 5-7 minutes. You can follow the steps
     by clicking notifications on the dark blue bar of azure portal.
