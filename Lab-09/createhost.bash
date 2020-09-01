@@ -3,12 +3,12 @@ A=$(echo "$a" | sed -e 's/\(.*\)/\L\1/')
 B=${A:$(echo `expr index "$A" @`)}
 C=${B:: -24}
 D=$(echo "$C"mig01)
-RG=Migrator
+RG=Protector
 VNet=Mig-VNet
 Nsg=MigNSG
 NsgR=MigRule1
 L=eastus
-VM=Migrator
+VM=Protector
 OS1=Win2019DataCenter
 OS2=MicrosoftWindowsServer:WindowsServer:2019-Datacenter-with-Containers:17763.1339.2007101755
 OSX=MicrosoftWindowsServer:WindowsServer:2019-Datacenter-with-Containers:17763.557.20190604
@@ -41,6 +41,5 @@ export SUBNETN01=$(az network vnet subnet show --resource-group $RG --vnet-name 
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN01 --network-security-group $Nsg
 
 az vm create --resource-group $RG -n $VM -l $L --image $OS2 --admin-username $user --admin-password $pass --size $VMSize2 --public-ip-address $Pip --public-ip-address-allocation static --subnet $SUBNETID01 --boot-diagnostics-storage $D --license-type Windows_Server --nsg ""
-
 
 
