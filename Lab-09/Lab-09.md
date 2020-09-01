@@ -50,6 +50,8 @@ After completing this lab, you will be able to:
 
 -   Perform planned failover
 
+-   Perform unplanned failover
+
 ## Lab Environment
 
 Windows Server admin credentials
@@ -158,12 +160,13 @@ The main tasks for this exercise are as follows:
 3.  On the **Review + create** tab of the **Create Recovery Services
     vault** blade, select **Create**:
 
-> **Note**: By default, the default configuration for Storage Replication type is set to Geo-redundant (GRS) and Soft Delete is
+> **Note**: By default, the default configuration for Storage
+> Replication type is set to Geo-redundant (GRS) and Soft Delete is
 > enabled. You will change these settings in the lab to simplify
 > deprovisioning, but you should use them in your production
 > environments.
 
-**Task 2: Configure the Azure Site Recovery vault**
+#### Task 2: Configure the Azure Site Recovery vault
 
 1.  Open the newly created *Recovery Services vault* **Protector**.
 
@@ -182,8 +185,8 @@ The main tasks for this exercise are as follows:
     1.  Set **Soft Delete** to **Disable**, and select **Save** and
         close the **Security Settings** blade.
 
-**Exercise 2: Implement Hyper-V protection by using Azure Site Recovery
-vault**
+### Exercise 2: Implement Hyper-V protection by using Azure Site Recovery
+vault
 
 The main tasks for this exercise are as follows:
 
@@ -199,7 +202,7 @@ The main tasks for this exercise are as follows:
 1.  **create** tab of the **Create storage account** blade,
     select **Create**.
 
-**Task 1: Prepare Infrastructure**
+#### Task 1: Prepare Infrastructure
 
 1.  Within the Remote Desktop Select Site Recovery **Protector**, under
     **Site Recovery**, click **Getting Started**
@@ -287,7 +290,7 @@ The main tasks for this exercise are as follows:
     4.  This will divert you back to **Protector \| Site Recovery**
         blade. Else, navigate yourself.
 
-**Task 2: Enable replication**
+#### Task 2: Enable replication
 
 1.  Under **Protector \| Site Recovery**, click **Getting Started**
 
@@ -353,7 +356,8 @@ The main tasks for this exercise are as follows:
 6.  Also, you can follow the replication progress on Hyper-V console, by
     the status of the 2012-R2 virtual machine.
 
-**Task 3: Review Azure VM replication settings**
+#### Task 3: Review Azure VM replication settings
+
 
 1.  In the Azure portal, navigate to the **Protector** blade, under
     Overview \| Site Recovery and select **Replicated items**.
@@ -383,7 +387,7 @@ The main tasks for this exercise are as follows:
 
 6.  Click **Overview**
 
-**Task 3: Perform a Test failover of the Hyper-V virtual machine**
+#### Task 4: Perform a Test failover of the Hyper-V virtual machine
 
 1.  Select **Test failover**.
 
@@ -414,7 +418,7 @@ The main tasks for this exercise are as follows:
 9.  Follow the notifications until the clean-up completed. (this will
     delete the test vm)
 
-**Task 4: Perform the Failover of the Hyper-V virtual machine**
+#### Task 5: Perform the Failover of the Hyper-V virtual machine
 
 1.  Navigate back to the **Protector.** Click **Replicated Items** and
     click **2012-R2** 
@@ -434,7 +438,7 @@ The main tasks for this exercise are as follows:
 
 7.  Close the **Failover** blade.
 
-**Task 5: Remove Azure resources deployed in the lab**
+#### Task 6: Remove Azure resources deployed in the lab
 
 1.  Navigate back to the **Protector.**
 
