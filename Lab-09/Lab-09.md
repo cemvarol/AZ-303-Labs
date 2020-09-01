@@ -237,7 +237,8 @@ The main tasks for this exercise are as follows:
           - Click **Finish** when the installation completes
        
    3.  **Target Settings**
-      - This Automatically chooses the existing subscription and checks if you have available storage account at the location. Leave with the default setting. Click **Next**.
+        - This Automatically chooses the existing subscription and checks if you have available storage account at the location. Leave with the default setting. Click **Next**.
+        
    4.  **Replication Policy**
        - **Create new policy and associate**. (Leave default settings, ensure you assign a Name and set initial Replication as **Immediately**)
          - Name: Provide a name e.g: **Rep-Pol**
@@ -245,7 +246,8 @@ The main tasks for this exercise are as follows:
            - Recovery point retention in hours
            - App-Consistent snapshot frequency in hours
            - Initial Replication start time: **Immediately**	
-            - Click **Next** after completed			
+            - Click **Next** after completed	
+            
       5.  **Review**
           * Click **Prepare**	
 4. This will divert you back to **Protector \| Site Recovery** blade. Else, navigate yourself.
