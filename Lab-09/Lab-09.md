@@ -214,11 +214,12 @@ The main tasks for this exercise are as follows:
    follow
 
    1.  **Deployment Planning**
-   -   Choose **Yes, I have done it** and click **Next**
+        - Choose **Yes, I have done it** and click **Next**
+        
    
    2. **Source Settings**
-   -   Hyper-V Site: **QA-London**
-      -   Hyper-V Servers
+        - Hyper-V Site: **QA-London**
+        - Hyper-V Servers
           -   Add Hyper-V Server
       
                 -   Click download the installer to download the installer
