@@ -291,10 +291,10 @@ The main tasks for this exercise are as follows:
    4. **Replication Settings**
    - Choose OS Type as Windows. (this is for drivers for that OS) and click Next 5. Leave the default selected Replication Policy and click **Next**
          
-5. Leave the default selected Replication Policy and click **Next** 
+   5. **Replication Policy**
+   - Leave the default selected Replication Policy and click **Next** 
    
-6. Review
-   
+   6. **Review**
    - Review the settings and click **Enable Replication**
    
 4.  This will take approximately 5-7 minutes. You can follow the steps
