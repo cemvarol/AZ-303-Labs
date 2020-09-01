@@ -85,7 +85,7 @@ chmod +x Lab-07-Users.bash
 
 ```sh
 curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab-07-Resources.bash
-ls -la Lab-12a-SetUp.bash
+ls -la Lab-07-Resources.bash
 chmod +x Lab-07-Resources.bash
 ./Lab-07-Resources.bash
 ```
