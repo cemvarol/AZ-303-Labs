@@ -247,7 +247,7 @@ Your Hyper-V Server will appear on the portal after the agent installation compl
  
  > Note: If does not appear, click **Deployment Planning**, and click **Next**.
 
-   3. **Target Settings**
+    3. **Target Settings**
 
       -   This Automatically chooses the existing subscription and checks if you have available storage account at the location. Leave with the default setting. Click **Next**.
 
