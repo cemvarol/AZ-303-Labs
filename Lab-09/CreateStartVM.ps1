@@ -12,7 +12,7 @@ move 2012-R2.vhd c:\vms
 
 cd c:\vms
 
-$Gurl = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab09/GuestVM.ps1"
+$Gurl = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/GuestVM.ps1"
 $Goutput = ".\GuestVM.ps1"
 Invoke-WebRequest -Uri $Gurl -OutFile $Goutput
 
