@@ -214,25 +214,27 @@ The main tasks for this exercise are as follows:
    follow
 
    1.  **Deployment Planning**
-   -   Choose **Yes, I have done it** and click Next
+   -   Choose **Yes, I have done it** and click **Next**
+   
    2. **Source Settings**
    -   Hyper-V Site: **QA-London**
       -   Hyper-V Servers
           -   Add Hyper-V Server
       
-           -   Click download the installer to download the installer
+                -   Click download the installer to download the installer
       
-              -   Click the big blue button to download the registration file
+                -   Click the big blue button to download the registration file
 
-          -   Launch the downloaded **AzureSiteRecoveryProvider.exe** file. This will start the installation wizard.
+          - Launch the downloaded **AzureSiteRecoveryProvider.exe** file. This will start the installation wizard.
       
-       -   On the Microsoft Update page, select **Off** and select **Next**.
+          - On the Microsoft Update page, select **Off** and select **Next**.
       
-          -   On the Provider installation page, select **Install**.
+          - On the Provider installation page, select **Install**.
 
-          -   Click **Register** when the wizard asks. Select Browse, navigate to the **Downloads**, select the *vault credentials file*, and click **Open**.
-      
-       -   Click **Finish** when the installation completes
+          - Click **Register** when the wizard asks. Select Browse, navigate to the **Downloads**, select the *vault credentials file*, and click **Open**.
+          
+          - Click **Finish** when the installation completes
+       
    3.  **Target Settings**
       - This Automatically chooses the existing subscription and checks if you have available storage account at the location. Leave with the default setting. Click **Next**.
    4.  **Replication Policy**
