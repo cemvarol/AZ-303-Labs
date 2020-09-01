@@ -16,7 +16,7 @@ $Gurl = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Gu
 $Goutput = ".\GuestVM.ps1"
 Invoke-WebRequest -Uri $Gurl -OutFile $Goutput
 
-$GBurl = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab09/GuestBat.bat"
+$GBurl = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/GuestBat.bat"
 $GBoutput = ".\GuestBat.bat"
 Invoke-WebRequest -Uri $GBurl -OutFile $GBoutput
 
