@@ -104,10 +104,7 @@ chmod +x Lab-09-Resources.bash
 
 -   Password: **1q2w3e4r5t6y\***
 
-```{=html}
-<!-- -->
-```
--   Important Note: All the actions you will follow including this step
+> **Important Note:** All the actions you will follow including this step
     will be done on this Remote Computer's Console.
 
 4.  Within the Remote Desktop session run the following command in
