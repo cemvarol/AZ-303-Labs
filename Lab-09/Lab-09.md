@@ -70,7 +70,7 @@ The main tasks for this exercise are as follows:
 
 2.  Configure nested virtualization in the Azure VM
 
-#### Task 1: Deploy an Azure VM by using an Azure Resource Manager QuickStart template
+#### Task 1: Deploy an Azure VM for the Lab
 
 1.  Open [**Cloud Shell**](https://shell.azure.com) pane by selecting on
     the toolbar icon directly to the right of the search textbox.
@@ -193,8 +193,12 @@ The main tasks for this exercise are as follows:
 
 3.  Remove Azure resources deployed in the lab
 
-    -   **create** tab of the **Create storage account** blade,
-    select **Create**.
+4.  Review Azure VM replication settings
+
+5.  Perform the Failover of the Hyper-V virtual machine
+
+6.  Remove Azure resources deployed in the lab
+
 
 #### Task 1: Prepare Infrastructure
 
