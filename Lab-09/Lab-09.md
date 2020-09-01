@@ -246,13 +246,12 @@ The main tasks for this exercise are as follows:
            - Recovery point retention in hours
            - App-Consistent snapshot frequency in hours
            - Initial Replication start time: **Immediately**	
-            - Click **Next** after completed	          
-          
-   5.  **Review**
-          * Click **Prepare**	      
-   6.  **Finish**
-          * This will divert you back to **Protector \| Site Recovery** blade. Else, navigate yourself.
-          
+            - Click **Next** after completed	
+            
+    5.  **Review**  
+          * Click **Prepare**	
+4. This will divert you back to **Protector \| Site Recovery** blade. Else, navigate yourself.
+
 #### Task 2: Enable replication
 
 1.  Under **Protector \| Site Recovery**, click **Getting Started**
