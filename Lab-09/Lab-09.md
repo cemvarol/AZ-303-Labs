@@ -109,16 +109,19 @@ chmod +x Lab-09-Resources.bash
 
 4.  Within the Remote Desktop session run the following command in
     **PowerShell** to create the guest vm to protect.
+    
+  ```powershell
 
-     cd\\
-  -- ----------------------------------------------------------------------------------------------
-     mkdir Lab09
-     
-     \$url = \"https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Set-Lab.ps1\"
-     \$output = \"C:\\Lab09\\Lab09.ps1\"
-     Invoke-WebRequest -Uri \$url -OutFile \$output
-     Start-Process Powershell.exe -Argumentlist \"-file C:\\Lab09\\Lab09.ps1\"
-     
+  	cd\
+	mkdir Lab09
+	
+	$url = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Set-Lab.ps1"
+	$output = "C:\Lab09\Lab09.ps1"
+	Invoke-WebRequest -Uri $url -OutFile $output
+	Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
+	
+ ```
+
 
 1.  In the Virtual Machine Connection window to **2012-R2**, on
     the **License terms** page, select **Accept**.
