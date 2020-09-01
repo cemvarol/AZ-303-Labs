@@ -148,12 +148,12 @@ The main tasks for this exercise are as follows:
     following settings (leave others with their default values) and
     select **Review + create**:
 
-  **Setting**      **Value**
-  ---------------- --------------------------------------------------
-  Subscription     Choose your own subscription
-  Resource group   Create a new resource group **Lab-09-Protected**
-  Vault name       **Protector**
-  Location         East Us
+     | Setting | Value | 
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource group | the name of a new resource group **Lab-09-Protected** |
+    | Vault name | **Protector** |
+    | Location | **East Us**  |
 
 3.  On the **Review + create** tab of the **Create Recovery Services
     vault** blade, select **Create**:
