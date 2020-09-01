@@ -305,8 +305,12 @@ The main tasks for this exercise are as follows:
       - Click **Next**
 
    3. **Virtual Machine Selection** 
+  
+        - Choose 2012-R2 and click **Next**
 
    4. **Replication Settings**
+   
+         - Choose OS Type as Windows. (this is for drivers for that OS) and click Next 5. Leave the default selected Replication Policy and click **Next**
 
    5. Leave the default selected Replication Policy and click **Next** 
 
