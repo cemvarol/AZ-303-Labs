@@ -241,8 +241,7 @@ The main tasks for this exercise are as follows:
 
 Your Hyper-V Server will appear on the portal after the agent installation completes
  
- > Note: If does not appear, click **Deployment Planning**, and click
-      > **next**.
+ > Note: If does not appear, click **Deployment Planning**, and click **Next**.
 
    3. **Target Settings**
 
