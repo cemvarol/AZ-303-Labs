@@ -79,14 +79,14 @@ The main tasks for this exercise are as follows:
 
 > **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab,  and select **Create storage**.
 
-3.  In the toolbar of the Cloud Shell pane, run the following command to
-    create the vm.
+3.  In the toolbar of the Cloud Shell pane, run the following command to create the vm.
 
-> curl -O
-> https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Lab-09-Resources.bash\
-> ls -la Lab-09-Resources.bash\
-> chmod +x Lab-09-Resources.bash\
-> ./Lab-09-Resources.bash
+```sh
+curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Lab-09-Resources.bash\
+ls -la Lab-09-Resources.bash
+chmod +x Lab-09-Resources.bash
+./Lab-09-Resources.bash
+```
 
 #### Task 2: Configure nested virtualization in the Azure VM
 
