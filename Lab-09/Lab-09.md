@@ -239,12 +239,9 @@ The main tasks for this exercise are as follows:
 
           -   Click **Finish** when the installation completes
 
-      ```
-      -   Your Hyper-V Server will appear on the portal after
-          installation completes
-      ```
-
-      > Note: If does not appear, click **Deployment Planning**, and click
+Your Hyper-V Server will appear on the portal after installation completes
+ 
+ > Note: If does not appear, click **Deployment Planning**, and click
       > **next**.
 
    3. **Target Settings**
