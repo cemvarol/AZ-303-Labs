@@ -50,8 +50,6 @@ After completing this lab, you will be able to:
 
 -   Perform planned failover
 
--   Perform unplanned failover
-
 ## Lab Environment
 
 Windows Server admin credentials
@@ -88,7 +86,7 @@ The main tasks for this exercise are as follows:
 > chmod +x Lab-09-Resources.bash\
 > ./Lab-09-Resources.bash
 
-**Task 2: Configure nested virtualization in the Azure VM**
+#### Task 2: Configure nested virtualization in the Azure VM
 
 1.  Select **Virtual machines** and, on the **Virtual machines** blade,
     select **Prot-VM01**.
@@ -133,7 +131,7 @@ The main tasks for this exercise are as follows:
 
 -   Note: Your Guest Vm will be ready after this step.
 
-**Exercise 1: Create and configure an Azure Site Recovery vault**
+### Exercise 1: Create and configure an Azure Site Recovery vault
 
 The main tasks for this exercise are as follows:
 
@@ -141,7 +139,7 @@ The main tasks for this exercise are as follows:
 
 2.  Configure the Azure Site Recovery vault
 
-**Task 1: Create an Azure Site Recovery vault**
+#### Task 1: Create an Azure Site Recovery vault
 
 1.  Within the Remote Desktop session to **Prot-VM01**, navigate to
     the [[Azure portal]{.ul}](https://portal.azure.com/), and sign in.
@@ -160,8 +158,7 @@ The main tasks for this exercise are as follows:
 3.  On the **Review + create** tab of the **Create Recovery Services
     vault** blade, select **Create**:
 
-> **Note**: By default, the default configuration for Storage
-> Replication type is set to Geo-redundant (GRS) and Soft Delete is
+> **Note**: By default, the default configuration for Storage Replication type is set to Geo-redundant (GRS) and Soft Delete is
 > enabled. You will change these settings in the lab to simplify
 > deprovisioning, but you should use them in your production
 > environments.
