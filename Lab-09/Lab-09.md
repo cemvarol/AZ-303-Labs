@@ -107,29 +107,27 @@ chmod +x Lab-09-Resources.bash
 > **Important Note:** All the actions you will follow including this step
     will be done on this Remote Computer's Console.
 
-4.  Within the Remote Desktop session run the following command in
+5.  Within the Remote Desktop session run the following command in
     **PowerShell** to create the guest vm to protect.
     
   ```powershell
 
-  	cd\
-	mkdir Lab09
-	
-	$url = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Set-Lab.ps1"
-	$output = "C:\Lab09\Lab09.ps1"
-	Invoke-WebRequest -Uri $url -OutFile $output
-	Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
-	
+  cd\
+mkdir Lab09
+$url = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/Set-Lab.ps1"
+$output = "C:\Lab09\Lab09.ps1"
+Invoke-WebRequest -Uri $url -OutFile $output
+Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
  ```
 
 
-1.  In the Virtual Machine Connection window to **2012-R2**, on
+6.  In the Virtual Machine Connection window to **2012-R2**, on
     the **License terms** page, select **Accept**.
 
-2.  Set the password of the built-in Administrator account
+7.  Set the password of the built-in Administrator account
     to **London2020\*** and select **Finish**.
 
-3.  After Restart, sign in by using the newly set password.
+8.  After Restart, sign in by using the newly set password.
 
 -   Note: Your Guest Vm will be ready after this step.
 
