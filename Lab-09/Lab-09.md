@@ -183,8 +183,7 @@ The main tasks for this exercise are as follows:
     1.  Set **Soft Delete** to **Disable**, and select **Save** and
         close the **Security Settings** blade.
 
-### Exercise 2: Implement Hyper-V protection by using Azure Site Recovery
-vault
+### Exercise 2: Implement Hyper-V protection by using Azure Site Recovery Vault
 
 The main tasks for this exercise are as follows:
 
@@ -194,10 +193,7 @@ The main tasks for this exercise are as follows:
 
 3.  Remove Azure resources deployed in the lab
 
-```{=html}
-<!-- -->
-```
-1.  **create** tab of the **Create storage account** blade,
+    1.  **create** tab of the **Create storage account** blade,
     select **Create**.
 
 #### Task 1: Prepare Infrastructure
