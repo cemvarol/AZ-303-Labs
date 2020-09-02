@@ -1,3 +1,4 @@
+az provider register --namespace 'Microsoft.Insights'
 a=$(az ad signed-in-user show --query userPrincipalName)
 A=$(echo "$a" | sed -e 's/\(.*\)/\L\1/')
 B=${A:$(echo `expr index "$A" @`)}
