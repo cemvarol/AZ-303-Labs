@@ -198,9 +198,6 @@ The main tasks for this exercise are as follows:
    az group list --query "[?contains(name,'Lab-04a')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
-1. Close the Cloud Shell pane.
-
-
 ### Exercise 2: Implement and analyze highly available Azure VM deployments using availability zones and Azure Load Balancer Standard
 
 The main tasks for this exercise are as follows:
