@@ -211,38 +211,39 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Deploy highly available Azure VMs into availability zones behind an Azure Load Balancer Standard by using Azure Resource Manager templates
 
-1. If needed, in the Azure portal, open **Cloud Shell** pane by selecting on the toolbar icon directly to the right of the search textbox.
+1. Navigate to the [Azure portal](https://portal.azure.com), and sign in
+
+1. Navigate to the [Cloud Shell](https://shell.azure.com)
+
+1. In the Azure portal, open the **Cloud Shell** pane by selecting on the toolbar icon directly to the right of the search textbox.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301subb.json** into the Cloud Shell home directory.
-
-1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
-
-   ```sh
-   LOCATION='<Azure region>'
-   az deployment sub create \
-   --location $LOCATION \
-   --template-file azuredeploy30301subb.json \
-   --parameters rgName=az30301b-labRG rgLocation=$LOCATION
-   ```
-
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgb.json**.
-
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgb.parameters.json**.
-
-1. From the Cloud Shell pane, run the following to deploy an Azure Load Balancer Standard with its backend pool consisting of a pair of Azure VMs hosting Windows Server 2019 Datacenter Core across two availability zones:
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
+    
+1. Run the following  command to create the resources needed in this ecercise. :
 
    ```sh
-   az deployment group create \
-   --resource-group az30301b-labRG \
-   --template-file azuredeploy30301rgb.json \
-   --parameters @azuredeploy30301rgb.parameters.json
+   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/Lab-04-Resources.bash
+   ls -la Lab-04-Resources.bash
+   chmod +x Lab-04-Resources.bash
+   ./Lab-04-Resources.bash
    ```
 
-    > **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 10 minutes.
+   **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 6-8 minutes.
 
-1. In the Azure portal, close the Cloud Shell pane. 
+1. Leave the **Cloud Shell** tab open. 
+
+1. Navigate to Virtual Machines, and click **L04-VM01**. Click **Run Command** under *Operations.* 
+
+1. Click **RunPowerShellScript** and run the following script in the *Run Command Script* area. 
+
+   ```sh
+    add-windowsfeature web-server
+    Set-NetFirewallProfile -Enabled False
+    Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value  "Hello I am $($env:computername)"
+   ```
+
 
 
 #### Task 2: Analyze highly available Azure VMs deployed across availability zones behind an Azure Load Balancer Standard
