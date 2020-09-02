@@ -9,6 +9,7 @@ Nsg=L04bNSG
 NsgR=L04bRule1
 L=eastus
 LB=Lab04b-LB
+LBFEip=Lab04b-FEip
 BEndPool=Lab04b-1BEpool
 VM01=L04b-VM01
 VM02=L04b-VM02
@@ -33,14 +34,16 @@ export SUBNETN01=$(az network vnet subnet show --resource-group $RG --vnet-name 
 
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN01 --network-security-group $Nsg
 
+az vm availability-set create -n AVS01 -g $RG -l $L --platform-fault-domain-count 3 --platform-update-domain-count 2
+
 #Load Balancer Create
-az network lb create -g $RG -n $LB -l $L --sku Standard --public-ip-address Lab04b-NLBpip --frontend-ip-name Lab04-1FEip --backend-pool-name $BEndPool
+az network lb create -g $RG -n $LB -l $L --sku Basic --public-ip-address Lab04b-NLBpip --frontend-ip-name $LBFEip --backend-pool-name $BEndPool
 
 #Load Balancer Health Probe Create
 az network lb probe create -g $RG --lb-name $LB --name Web --protocol tcp --port 80
 
 #Load Balancer Rule Create
-az network lb rule create -g $RG --lb-name $LB --name http --protocol tcp --frontend-port 80 --backend-port 80 --frontend-ip-name Lab04-1FEip --backend-pool-name $BEndPool --probe-name Web --disable-outbound-snat true
+az network lb rule create -g $RG --lb-name $LB --name http --protocol tcp --frontend-port 80 --backend-port 80 --frontend-ip-name $LBFEip --backend-pool-name $BEndPool --probe-name Web --disable-outbound-snat true
 
 #Create NICs
 az network nic create --resource-group $RG --name $Nic01 --vnet-name $VNet --subnet $SUBNETN01 --lb-name $LB --lb-address-pools $BEndPool --no-wait
