@@ -34,8 +34,6 @@ export SUBNETN01=$(az network vnet subnet show --resource-group $RG --vnet-name 
 
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN01 --network-security-group $Nsg
 
-az vm availability-set create -n AVS01 -g $RG -l $L --platform-fault-domain-count 3 --platform-update-domain-count 2
-
 #Load Balancer Create
 az network lb create -g $RG -n $LB -l $L --sku Basic --public-ip-address Lab04b-NLBpip --frontend-ip-name $LBFEip --backend-pool-name $BEndPool
 
