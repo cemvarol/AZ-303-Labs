@@ -72,7 +72,7 @@ The main tasks for this exercise are as follows:
 
 1. Navigate to the [Azure portal](https://portal.azure.com), and sign in
 
-1. Navigate to the Cloud Shell
+1. Navigate to the [Cloud Shell](https://shell.azure.com)
 
 1. In the Azure portal, open the **Cloud Shell** pane by selecting on the toolbar icon directly to the right of the search textbox.
 
