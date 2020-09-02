@@ -49,7 +49,7 @@ az network nic create --resource-group $RG --name $Nic02 --vnet-name $VNet --sub
 
 #VM Create
 az vm create --resource-group $RG -n $VM01 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --nics $Nic01 --license-type Windows_Server --nsg "" --availability-set AVS01 --no-wait
-az vm create --resource-group $RG -n $VM02 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --nics $Nic01 --license-type Windows_Server --nsg "" --availability-set AVS01
+az vm create --resource-group $RG -n $VM02 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --nics $Nic02 --license-type Windows_Server --nsg "" --availability-set AVS01
 
 z1=$(az network public-ip show -g az30301a-labRG -n Lab04-LBpip --query ipAddress)
 z2=${z1:$(echo `expr index "$z1" '"'`)}
