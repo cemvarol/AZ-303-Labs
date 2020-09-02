@@ -10,7 +10,7 @@ NsgR=L04bRule1
 L=eastus
 LB=Lab04b-LB
 LBFEip=Lab04b-FEip
-BEndPool=Lab04b-1BEpool
+BEndPool=Lab04b-BEpool
 VM01=L04b-VM01
 VM02=L04b-VM02
 Nic01=$(echo "$VM01"VMNic)
@@ -56,7 +56,3 @@ az vm create --resource-group $RG -n $VM02 -l $L --image $OS --admin-username $u
 z1=$(az network public-ip show -g $RG -n Lab04b-NLBpip --query ipAddress)
 z2=${z1:$(echo `expr index "$z1" '"'`)}
 NLBip=${z2:: -1}
-
-
-
-#
