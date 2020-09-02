@@ -55,3 +55,6 @@ z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
 z2=${z1:$(echo `expr index "$z1" '"'`)}
 NLBip=${z2:: -1}
 
+
+
+#
