@@ -35,7 +35,7 @@ az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN01 --network-s
 az vm availability-set create -n AVS01 -g $RG -l $L --platform-fault-domain-count 3 --platform-update-domain-count 2
 
 #Load Balancer Create
-az network lb create -g $RG -n $LB -l $L --sku Basic --public-ip-address Lab04-1pip --frontend-ip-name Lab04-1FEip --backend-pool-name $BEndPool
+az network lb create -g $RG -n $LB -l $L --sku Basic --public-ip-address Lab04-NLBpip --frontend-ip-name Lab04-1FEip --backend-pool-name $BEndPool
 
 #Load Balancer Health Probe Create
 az network lb probe create -g $RG --lb-name $LB --name Web --protocol tcp --port 80
@@ -51,7 +51,7 @@ az network nic create --resource-group $RG --name $Nic02 --vnet-name $VNet --sub
 az vm create --resource-group $RG -n $VM01 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --nics $Nic01 --license-type Windows_Server --nsg "" --availability-set AVS01 --no-wait
 az vm create --resource-group $RG -n $VM02 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --nics $Nic02 --license-type Windows_Server --nsg "" --availability-set AVS01
 
-z1=$(az network public-ip show -g az30301a-labRG -n Lab04-LBpip --query ipAddress)
+z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
 z2=${z1:$(echo `expr index "$z1" '"'`)}
 NLBip=${z2:: -1}
 
