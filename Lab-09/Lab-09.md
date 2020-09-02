@@ -289,7 +289,7 @@ The main tasks for this exercise are as follows:
         - Choose 2012-R2 and click **Next**
 
    4. **Replication Settings**
-        - Choose OS Type as Windows. (this is for drivers for that OS) and click Next 5. Leave the default selected Replication Policy and click **Next**
+        - Choose OS Type as Windows. (this is for drivers for that OS) and click **Next**
          
    5. **Replication Policy**
         - Leave the default selected Replication Policy and click **Next** 
