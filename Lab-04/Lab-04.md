@@ -52,7 +52,7 @@ Windows Server admin credentials
 
 -  Password: **1q2w3e4r5t6y***
 
-Estimated Time: 75 minutes
+Estimated Time: 60 minutes
 
 
 ## Instructions
