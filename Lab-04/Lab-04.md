@@ -93,7 +93,7 @@ The main tasks for this exercise are as follows:
 
 1. Leave the **Cloud Shell** tab open. 
 
-1. Navigate to Virtual Machines, and click **L04-VM01**. Click **Run Command** under *Operations.* 
+1. Navigate to Virtual Machines, and click **L04a-VM01**. Click **Run Command** under *Operations.* 
 
 1. Click **RunPowerShellScript** and run the following script in the *Run Command Script* area. 
 
@@ -102,6 +102,7 @@ The main tasks for this exercise are as follows:
     Set-NetFirewallProfile -Enabled False
     Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value  "Hello I am $($env:computername)"
    ```
+1. Follow the same steps for  **L04a-VM02**
 
 #### Task 2: Analyze highly available Azure VMs deployed into an availability set behind an Azure Load Balancer Basic
 
@@ -125,10 +126,10 @@ The main tasks for this exercise are as follows:
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **AZ-303Lab-04a**                                            |
-    | Virtual machine | **L04-VM01** |
+    | Virtual machine | **L04a-VM01** |
     | Network interface | **L04-VM01VMNic** |
 
-1. Review the associated network security group and the effective security rules, including two custom rules that allow inbound connectivity via RDP and HTTP. 
+1. Review the associated network security group and the effective security rules, including two custom rules that allow inbound connectivity via HTTP. 
 
 1. On the **Network Watcher** blade, select **Connection troubleshoot**.
 
@@ -141,10 +142,10 @@ The main tasks for this exercise are as follows:
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **AZ-303Lab-04a** |
     | Source type | **Virtual machine** |
-    | Virtual machine | **L04-VM01** |
+    | Virtual machine | **L04a-VM01** |
     | Destination | **Select a virtual machine** |
     | Resource group | **AZ-303Lab-04a**                                            |
-    | Virtual machine | **L04-VM02**                                                 |
+    | Virtual machine | **L04a-VM02**                                                 |
     | Protocol | **TCP** |
     | Destination port| **80** |
 
@@ -157,7 +158,7 @@ The main tasks for this exercise are as follows:
 1. From the Cloud Shell pane, run the following to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer.
 
     ```sh
-    z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
+    z1=$(az network public-ip show -g $RG -n Lab04a-NLBpip --query ipAddress)
     z2=${z1:$(echo `expr index "$z1" '"'`)}
     NLBip=${z2:: -1}
     for i in {1..5}; do curl $NLBip; done
@@ -172,7 +173,7 @@ The main tasks for this exercise are as follows:
 1. Wait for the update to complete and, re-run the following. to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer without session persistence
 
     ```sh
-    z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
+    z1=$(az network public-ip show -g $RG -n Lab04a-NLBpip --query ipAddress)
     z2=${z1:$(echo `expr index "$z1" '"'`)}
     NLBip=${z2:: -1}
     for i in {1..5}; do curl $NLBip; done
@@ -243,6 +244,7 @@ The main tasks for this exercise are as follows:
     Set-NetFirewallProfile -Enabled False
     Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value  "Hello I am $($env:computername)"
    ```
+1. Follow the same steps for  **L04b-VM02**
 
 #### Task 2: Analyze highly available Azure VMs deployed across availability zones behind an Azure Load Balancer Standard
 
@@ -310,7 +312,7 @@ The main tasks for this exercise are as follows:
 1. From the Cloud Shell pane, run the following to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer.
 
     ```sh
-    z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
+    z1=$(az network public-ip show -g $RG -n Lab04b-NLBpip --query ipAddress)
     z2=${z1:$(echo `expr index "$z1" '"'`)}
     NLBip=${z2:: -1}
     for i in {1..5}; do curl $NLBip; done
@@ -318,14 +320,14 @@ The main tasks for this exercise are as follows:
 
      > **Note**: Verify that the returned messages indicate that the requests are being delivered in the round robin manner to the backend Azure VMs
 
-1. Navigate to **Lab04-1LB** and select the **Load balancing rules**. Select the **http** entry
+1. Navigate to **Lab04b-LB** and select the **Load balancing rules**. Select the **http** entry
 
 1. In the **Session persistence** drop-down list, select **Client IP** and then select **Save**.
 
 1. Wait for the update to complete and, re-run the following. to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer without session persistence
 
     ```sh
-    z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
+    z1=$(az network public-ip show -g $RG -n Lab04b-NLBpip --query ipAddress)
     z2=${z1:$(echo `expr index "$z1" '"'`)}
     NLBip=${z2:: -1}
     for i in {1..5}; do curl $NLBip; done
@@ -348,7 +350,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: Azure Load Balancer Standard allows you to designate a dedicated frontend IP address for outbound traffic (in cases where multiple frontend IP addresses are assigned).
 
-1. Navigate to Virtual Machines, and click **L04-VM01**. Click **Run Command** under  *Operations*.
+1. Navigate to Virtual Machines, and click **L04b-VM01**. Click **Run Command** under  *Operations*.
 
 1. Click **RunPowerShellScript** and run the following script in the *Run Command Script* area.
 
