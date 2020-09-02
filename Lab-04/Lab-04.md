@@ -224,17 +224,17 @@ The main tasks for this exercise are as follows:
 1. Run the following  command to create the resources needed in this ecercise. :
 
    ```sh
-   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/Lab-04-Resources.bash
-   ls -la Lab-04-Resources.bash
-   chmod +x Lab-04-Resources.bash
-   ./Lab-04-Resources.bash
+   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/Lab-04b-Resources.bash
+   ls -la Lab-04b-Resources.bash
+   chmod +x Lab-04b-Resources.bash
+   ./Lab-04b-Resources.bash
    ```
 
    **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 6-8 minutes.
 
 1. Leave the **Cloud Shell** tab open. 
 
-1. Navigate to Virtual Machines, and click **L04-VM01**. Click **Run Command** under *Operations.* 
+1. Navigate to Virtual Machines, and click **L04b-VM01**. Click **Run Command** under *Operations.* 
 
 1. Click **RunPowerShellScript** and run the following script in the *Run Command Script* area. 
 
@@ -255,8 +255,8 @@ The main tasks for this exercise are as follows:
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az30301b-labRG** |
-    | Virtual Network | **az30301b-vnet** |
+    | Resource Group | **AZ-303Lab-04b** |
+    | Virtual Network | **Lab04b-VNet01** |
 
 1. Review the resulting topology diagram, noting the connections between the public IP address, load balancer, and the network adapters of Azure VMs in its backend pool.
 
@@ -269,13 +269,13 @@ The main tasks for this exercise are as follows:
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az30301b-labRG** |
-    | Virtual machine | **az30301b-vm0** |
-    | Network interface | **az30301b-nic0** |
+    | Resource group | **AZ-303Lab-04b** |
+    | Virtual machine | **L04b-VM01** |
+    | Network interface | **L04b-VM01VMNic** |
 
-1. Review the associated network security group and the effective security rules, including two custom rules that allow inbound connectivity via RDP and HTTP. 
+1. Review the associated network security group and the effective security rules, including two custom rules that allow inbound connectivity via HTTP. 
 
-    > **Note**: This listing is also practically identical to the one you viewed in the previous exercise, with network-level protection implemented by using a network security group associated with the subnet to which both Azure VMs are connected. Keep in mind, however, that the network security group is, in this case, required for the HTTP and RDP traffic to reach the backend pool Azure VMs, due to the usage of the Azure Load Balancer Standard SKU (NSGs are optional when using the Basic SKU).
+    > **Note**: This listing is also practically identical to the one you viewed in the previous exercise, with network-level protection implemented by using a network security group associated with the subnet to which both Azure VMs are connected. Keep in mind, however, that the network security group is, in this case, required for the HTTP traffic to reach the backend pool Azure VMs, due to the usage of the Azure Load Balancer Standard SKU (NSGs are optional when using the Basic SKU).
 
 1. On the **Network Watcher** blade, select **Connection troubleshoot**.
 
@@ -286,12 +286,12 @@ The main tasks for this exercise are as follows:
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az30301b-labRG** |
+    | Resource group | **AZ-303Lab-04b**                                            |
     | Source type | **Virtual machine** |
-    | Virtual machine | **az30301b-vm0** |
+    | Virtual machine | **L04b-VM01**                                                |
     | Destination | **Select a virtual machine** |
-    | Resource group | **az30301b-labRG** |
-    | Virtual machine | **az30301b-vm1** |
+    | Resource group | **AZ-303Lab-04b**                                            |
+    | Virtual machine | **L04b-VM02**                                                |
     | Protocol | **TCP** |
     | Destination port| **80** |
 
@@ -301,86 +301,68 @@ The main tasks for this exercise are as follows:
 
     > **Note**: The latency might be slightly higher than the one you observed in the previous exercise, since the two VMs are in different zones (within different Azure datacenters).
 
-1. In the Azure portal, navigate to the **az30301b-labRG** resource group blade, in the list of resources, select the **az30301b-vm0** virtual machine entry, and on the **az30301b-vm0** blade, note the **Location** and **Availability zone** entries. 
+1. In tNavigate to the **AZ-303Lab-04b**   Resource Group, in the list of resources, select the **L04b-VM01** virtual machine entry, and, note the **Location** and **Availability zone** entries. 
 
-1. In the Azure portal, navigate to the **az30301b-labRG** resource group blade, in the list of resources, select the **az30301b-vm1** virtual machine entry, and on the **az30301b-vm1** blade, note the **Location** and **Availability zone** entries. 
+1. Ensure that  **L04b-VM01** is in *Zone 1* and **L04b-VM02** is in *Zone 2*
 
     > **Note**: The entries you reviewed confirm that each Azure VM resides in a different availability zone.
 
-1. In the Azure portal, navigate to the **az30301b-labRG** resource group blade and, in the list of resources, select the **az30301b-lb** load balancer entry, and on the **az30301b-lb** blade, note the public IP address entry.
+1. Get back to previous **Bash** session tab.
 
-1. In the Azure portal, start a new **Bash** session in the Cloud Shell pane. 
+1. From the Cloud Shell pane, run the following to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer.
 
-1. From the Cloud Shell pane, run the following to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer (replace the `<lb_IP_address>` placeholder with the IP address of the front end of the load balancer you identified earlier):
+    ```sh
+    z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
+    z2=${z1:$(echo `expr index "$z1" '"'`)}
+    NLBip=${z2:: -1}
+    for i in {1..5}; do curl $NLBip; done
+    ```
 
-   ```sh
-   for i in {1..4}; do curl <lb_IP_address>; done
-   ```
+     > **Note**: Verify that the returned messages indicate that the requests are being delivered in the round robin manner to the backend Azure VMs
 
-    > **Note**: Verify that the returned messages indicate that the requests are being delivered in the round robin manner to the backend Azure VMs
+1. Navigate to **Lab04-1LB** and select the **Load balancing rules**. Select the **http** entry
 
-1. On the **az30301b-lb** blade, select the **Load balancing rules** entry and, on the **az30301b-lb \| Load balancing rules** blade, select the **az303001b-lbruletcp80** entry representing the load balancing rule handling HTTP traffic. 
+1. In the **Session persistence** drop-down list, select **Client IP** and then select **Save**.
 
-1. On the **az303001b-lbruletcp80** blade, in the **Session persistence** drop-down list, select **Client IP** and then select **Save**.
+1. Wait for the update to complete and, re-run the following. to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer without session persistence
 
-1. Wait for the update to complete and, from the Cloud Shell pane, re-run the following to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer without session persistence (replace the `<lb_IP_address>` placeholder with the IP address of the front end of the load balancer you identified earlier):
+    ```sh
+    z1=$(az network public-ip show -g $RG -n Lab04-NLBpip --query ipAddress)
+    z2=${z1:$(echo `expr index "$z1" '"'`)}
+    NLBip=${z2:: -1}
+    for i in {1..5}; do curl $NLBip; done
+    ```
 
-   ```sh
-   for i in {1..4}; do curl <lb_IP_address>; done
-   ```
-
-    > **Note**: Verify that the returned messages indicate that the requests are being delivered to the same backend Azure VMs
-
-1. In the Azure portal, navigate back to the **az30301b-lb** blade, select the **Inbound NAT rules** entry and note the two rules that allow for connecting to the first and the second of the backend pool VMs via Remote Desktop over TCP ports 33890 and 33891, respectively. 
-
-1. From the Cloud Shell pane, run the following to test Remote Desktop connectivity via NAT to the first Azure VM in the backend pool of the Azure load balancer (replace the `<lb_IP_address>` placeholder with the IP address of the front end of the load balancer you identified earlier):
-
-   ```sh
-   curl -v telnet://<lb_IP_address>:33890
-   ```
-
-    > **Note**: Verify that the returned message indicates that you are successfully connected. 
-
-1. Press the **Ctrl+C** key combination to return to the Bash shell prompt and run the following to test Remote Desktop connectivity via NAT to the second Azure VM in the backend pool of the Azure load balancer (replace the `<lb_IP_address>` placeholder with the IP address of the front end of the load balancer you identified earlier):
-
-   ```sh
-   curl -v telnet://<lb_IP_address>:33891
-   ```
-
-    > **Note**: Verify that the returned message indicates that you are successfully connected. 
-
-1. Press the **Ctrl+C** key combination to return to the Bash shell prompt and close the Cloud Shell pane.
-
-1. On the **az30301b-lb** blade, select the **Load balancing rules** entry and, on the **az30301b-lb \| Load balancing rules** blade, select the **az303001b-lbruletcp80** entry representing the load balancing rule handling HTTP traffic. 
+     > **Note**: Verify that the returned messages indicate that the requests are being delivered to the same backend Azure VMs
 
 1. On the **az303001b-lbruletcp80** blade, in the **Create implicit outbound rules** section, select **No**, and then select **Save**.
 
-1. Navigate back to the **az30301b-lb** blade, select the **Outbound rules** entry, and on the **az30301b-lb \| Outbound rules** blade, select **+ Add**.
+1. Navigate to the **Lab04b-LB** . Select the **Outbound rules** entry, select **+ Add**.
 
 1. On the **Add outbound rule** blade, specify the following settings and select **Add** (leave all other settings with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az303001b-obrule** |
-    | Frontend IP address | the name of the existing frontend IP address of the **az30301b-lb** load balancer |
-    | Backend pool | **az30301b-bepool** |
+    | Name | **Lab04b-LB** |
+    | Frontend IP address | the name of the existing frontend IP address  **Lab04b-FEip** |
+    | Backend pool | **Lab04b-1BEpool** |
     | Port allocation | **Manually choose number of outbound ports** |
     | Choose by | **Maximum number of backend instances** |
     | Maximum number of backend instances | **3** |
 
     > **Note**: Azure Load Balancer Standard allows you to designate a dedicated frontend IP address for outbound traffic (in cases where multiple frontend IP addresses are assigned).
 
-1. In the Azure portal, navigate to the **az30301b-labRG** resource group blade, in the list of resources, select the **az30301b-vm0** virtual machine entry, and on the **az30301b-vm0** blade, in the **Operations** blade, select **Run command**.
+1. Navigate to Virtual Machines, and click **L04-VM01**. Click **Run Command** under  *Operations*.
 
-1. On the **az30301b-vm0 \| Run command** blade, select **RunPowerShellScript**. 
+1. Click **RunPowerShellScript** and run the following script in the *Run Command Script* area.
 
 1. On the **Run Command Script** blade, in the **PowerShell Script** text box, type the following and select **Run**.
 
-   ```powershell
-   (Invoke-RestMethod -Uri "http://ipinfo.io").IP
-   ```
+     ```powershell
+     (Invoke-RestMethod -Uri "http://ipinfo.io").IP
+     ```
 
-    > **Note**: This command returns the public IP address from which the web request originates.
+      > **Note**: This command returns the public IP address from which the web request originates.
 
 1. Review the output and verify that it matches the public IP address assigned to the frontend of the Azure Load Balancer Standard, which you assigned to the outbound load balancing rule.
 
