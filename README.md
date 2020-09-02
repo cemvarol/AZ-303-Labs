@@ -1,6 +1,6 @@
 #### Simplified Content for AZ-303 Labs
 
-[Lab-04: https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-04/Lab-04.md](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-04/Lab-04.md)
+[Lab-04: Implementing Highly Available Azure IaaS Compute Architecture](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-04/Lab-04.md)
 
 [Lab-05: Azure Storage File and Blob Services](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-05/Lab-05.md)
 
