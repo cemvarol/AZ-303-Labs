@@ -165,7 +165,7 @@ The main tasks for this exercise are as follows:
 
      > **Note**: Verify that the returned messages indicate that the requests are being delivered in the round robin manner to the backend Azure VMs
 
-1. Navigate to **Lab04-1LB** and select the **Load balancing rules**. Select the **http** entry  
+1. Navigate to **Lab04a-LB** and select the **Load balancing rules**. Select the **http** entry  
 
 1. in the **Session persistence** drop-down list, select **Client IP** and then select **Save**.
 
@@ -243,8 +243,6 @@ The main tasks for this exercise are as follows:
     Set-NetFirewallProfile -Enabled False
     Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value  "Hello I am $($env:computername)"
    ```
-
-
 
 #### Task 2: Analyze highly available Azure VMs deployed across availability zones behind an Azure Load Balancer Standard
 
@@ -335,9 +333,7 @@ The main tasks for this exercise are as follows:
 
      > **Note**: Verify that the returned messages indicate that the requests are being delivered to the same backend Azure VMs
 
-1. On the **az303001b-lbruletcp80** blade, in the **Create implicit outbound rules** section, select **No**, and then select **Save**.
-
-1. Navigate to the **Lab04b-LB** . Select the **Outbound rules** entry, select **+ Add**.
+1. Navigate to the **Lab04b-LB** . Select the **Outbound rules** , select **+ Add**.
 
 1. On the **Add outbound rule** blade, specify the following settings and select **Add** (leave all other settings with their default values):
 
