@@ -20,8 +20,6 @@ $GBurl = "https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-09/G
 $GBoutput = ".\GuestBat.bat"
 Invoke-WebRequest -Uri $GBurl -OutFile $GBoutput
 
-Mount-VHD -Path ".\2012-R2.vhd"
-
 Start-Sleep -s 3
 cd\
 cd c:\vms
@@ -39,7 +37,7 @@ Dismount-VHD  -Path ".\2012-R2.vhd"
 
 Start-Sleep -s 3
 
-New-VM -VHDPath .\2012-R2.vhd -Confirm -Generation 1 -MemoryStartupBytes 4GB -Name 2012-R2 -Path c:\VMs\ -Switch VMs -force -AsJob
+New-VM -VHDPath .\2012-R2.vhd -Confirm -Generation 1 -MemoryStartupBytes 8GB -Name 2012-R2 -Path c:\VMs\ -Switch VMs -force -AsJob
 
 Start-Sleep -s 3
 
