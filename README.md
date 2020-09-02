@@ -2,7 +2,7 @@
 
 [Click for Lab-04](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-04/Lab-04.md)
 
-[Click for Lab-05](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-05/Lab-05.md)
+[Lab-05 Azure Storage File and Blob Services](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-05/Lab-05.md)
 
 [Click for Lab-09](https://github.com/cemvarol/AZ-303-Labs/blob/master/Lab-07/Lab-07.md)
 
