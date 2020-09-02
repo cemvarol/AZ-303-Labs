@@ -365,12 +365,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Remove Azure resources deployed in the exercise
 
-1. In the Azure portal, start a new **Bash** session in the Cloud Shell pane. 
-
 1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
 
    ```sh
-   az group list --query "[?starts_with(name,'az30301b-')]".name --output tsv
+   az group list --query "[?contains(name,'Lab-04b')]".name --output tsv
    ```
 
     > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
@@ -378,11 +376,8 @@ The main tasks for this exercise are as follows:
 1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
 
    ```sh
-   az group list --query "[?starts_with(name,'az30301b-')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   az group list --query "[?contains(name,'Lab-04b')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
-
-1. Close the Cloud Shell pane.
-
 
 ### Exercise 3: Implement and analyze highly available Azure VM Scale Set deployments using availability zones and Azure Application Gateway.
 
