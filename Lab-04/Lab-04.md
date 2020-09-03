@@ -83,10 +83,10 @@ The main tasks for this exercise are as follows:
 1. Run the following  command to create the resources needed in this ecercise. :
 
    ```sh
-   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/Lab-04-Resources.bash
-   ls -la Lab-04-Resources.bash
-   chmod +x Lab-04-Resources.bash
-   ./Lab-04-Resources.bash
+   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/Lab-04a-Resources.bash
+   ls -la Lab-04a-Resources.bash
+   chmod +x Lab-04a-Resources.bash
+   ./Lab-04a-Resources.bash
    ```
 
    **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 6-8 minutes.
