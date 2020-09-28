@@ -102,7 +102,7 @@ The main tasks for this exercise are as follows:
     Set-NetFirewallProfile -Enabled False
     Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value  "Hello I am $($env:computername)"
    ```
-1. Follow the same steps of ***Task 1*** for  **L04a-VM02**
+1. Please follow the steps of ***7 amd 8*** for  **L04a-VM02** to install the IIS service onto Lab04a-VM02
 
 #### Task 2: Analyze highly available Azure VMs deployed into an availability set behind an Azure Load Balancer Basic
 
