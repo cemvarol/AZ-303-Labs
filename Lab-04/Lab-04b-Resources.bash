@@ -35,7 +35,7 @@ export SUBNETN01=$(az network vnet subnet show --resource-group $RG --vnet-name 
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN01 --network-security-group $Nsg
 
 #Load Balancer Create
-az network lb create -g $RG -n $LB -l $L --sku Basic --public-ip-address Lab04b-NLBpip --frontend-ip-name $LBFEip --backend-pool-name $BEndPool
+az network lb create -g $RG -n $LB -l $L --sku Standard --public-ip-address Lab04b-NLBpip --frontend-ip-name $LBFEip --backend-pool-name $BEndPool
 
 #Load Balancer Health Probe Create
 az network lb probe create -g $RG --lb-name $LB --name Web --protocol tcp --port 80
