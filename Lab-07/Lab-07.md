@@ -60,11 +60,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create Azure Active Directory users
 
-1.  Open a new tab on your browser and visit <https://shell.azure.com>
-    choose **Bash**.
+1.  Open a new tab on your browser and visit <https://shell.azure.com> choose **Bash**.
 
-2.  Run the command down below to create users on Azure Active
-    Directory.
+2.  Run the command down below to create users on Azure Active Directory.
 
    ```sh
 curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-07/Lab-07-Users.bash
@@ -128,7 +126,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Test the RBAC role assignment
 
-1.  Start a new incognito web browser session, navigate to the [[Azure
+1.  Start a new incognito web browser session, navigate to the [Azure
     portal](https://portal.azure.com/), and sign in by using
     the user accounts with the **1q2w3e4r5t6y*** password.
 
