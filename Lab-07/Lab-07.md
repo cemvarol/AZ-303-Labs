@@ -129,7 +129,7 @@ The main tasks for this exercise are as follows:
 #### Task 2: Test the RBAC role assignment
 
 1.  Start a new incognito web browser session, navigate to the [[Azure
-    portal]{.ul}](https://portal.azure.com/), and sign in by using
+    portal](https://portal.azure.com/), and sign in by using
     the user accounts with the **1q2w3e4r5t6y*** password.
 
 2.  Observe that. Check the table below for the tasks
