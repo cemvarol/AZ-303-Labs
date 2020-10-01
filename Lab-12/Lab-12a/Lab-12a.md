@@ -61,7 +61,7 @@ Estimated Time: 15 minutes
  - a WebApp, with the label **lab12a** appended to your login name. 
 
    ```sh
-   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-12a/Lab-12a-SetUp.bash
+   curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-12/Lab-12a/Lab-12a-SetUp.bash           
    ls -la Lab-12a-SetUp.bash
    chmod +x Lab-12a-SetUp.bash
    ./Lab-12a-SetUp.bash
