@@ -218,6 +218,7 @@ The main tasks for this exercise are as follows:
         
    
    2. **Source Settings**
+        - Click No for "Are you using SCVMM to manage your Hyper-V Hosts?*
         - Hyper-V Site: **QA-London**
         - Hyper-V Servers
           -  Click **Add Hyper-V Server**
