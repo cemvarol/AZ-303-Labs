@@ -406,16 +406,17 @@ The main tasks for this exercise are as follows:
     group you created in this exercise:
 
 ```sh
-az group list \--query \"\[?contains(name,\'Lab-09\')\]\".name --output tsv
+az group list --query "[?contains(name,'Lab-09')]".name --output tsv 
 
 ```
+
 > **Note**: Verify that the output contains only the resource group you
 > created in this lab. This group will be deleted in this task.
 
 6.  From the Cloud Shell pane, run the following to delete the resource
     group you created in this lab
 ```sh
-az group list \--query \"\[?contains(name,\'Lab-09\')\]\".name --output tsv \| xargs -L1 bash -c \'az group delete \--name \$0 --no-wait \--yes\'
-```
+az group list --query "[?contains(name,'Lab-09')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+```                                                                    
 
 > Note: The Remote Computer you have been using during this lab will be automatically deleted
