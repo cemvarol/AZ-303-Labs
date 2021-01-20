@@ -121,15 +121,16 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
   ```
 
 
-6.  In the Virtual Machine Connection window to **2012-R2**, on the **Settings** Page choose **United Kingdom** for *Country or Region* and click **Next**
+6.  Open the Virtual Machine Connection window to **2012-R2** on **Hyper-V** Console
 
 
-    7.  On the **License terms** page, select **Accept**.
+    1.  On the **Settings** Page choose **United Kingdom** for *Country or Region* and click **Next**
 
-8.  Set the password of the built-in Administrator account
-    to **London2021\*** and select **Finish**.
+    2.  On the **License terms** page, select **Accept**.
 
-9.  After Restart, sign in by using the newly set password.
+    3.  Set the password of the built-in Administrator account to **London2021\*** and select **Finish**.
+
+    4.  After Restart, sign in by using the newly set password.
 
 -   Note: Your Guest Vm will be ready after this step.
 
