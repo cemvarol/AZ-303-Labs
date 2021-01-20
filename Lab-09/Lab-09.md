@@ -124,7 +124,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
 6.  In the Virtual Machine Connection window to **2012-R2**, on the **Settings** Page choose **United Kingdom** for *Country or Region* and click **Next**
 
 
-7.  On the **License terms** page, select **Accept**.
+    7.  On the **License terms** page, select **Accept**.
 
 8.  Set the password of the built-in Administrator account
     to **London2021\*** and select **Finish**.
