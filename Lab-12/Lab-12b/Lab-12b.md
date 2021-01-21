@@ -244,7 +244,7 @@ The main tasks for this exercise are as follows:
     -   You can put these values on single lines and put \-\-\-\-- as
     separator between the values*
 
-9.  Click **Save*
+9.  Click **Save**
 10.  Click **Run**
 
 
