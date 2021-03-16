@@ -410,9 +410,9 @@ The main tasks for this exercise are as follows:
    az deployment sub create --location '<Azure region>' --template-file azuredeploy30305subc.json --parameters rgName=az30301c-labRG rgLocation='<Azure region>'
    ```
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template [AZ303\AllFiles\Labs\05\azuredeploy30305rgc.json] (https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305rgc.json) .
+1. From the Cloud Shell pane, upload the Azure Resource Manager template [AZ303\AllFiles\Labs\05\azuredeploy30305rgc.json](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305rgc.json) .
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file [AZ303\AllFiles\Labs\05\azuredeploy30305rgc.parameters.json] (https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305rgc.parameters.json).
+1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file [AZ303\AllFiles\Labs\05\azuredeploy30305rgc.parameters.json](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305rgc.parameters.json).
 
 1. From the Cloud Shell pane, run the following to deploy an Azure Application Gateway with its backend pool consisting of a pair of Azure VMs hosting Windows Server 2019 Datacenter Core across different availability zones:
 
