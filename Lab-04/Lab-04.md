@@ -402,7 +402,7 @@ The main tasks for this exercise are as follows:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file [AZ303\AllFiles\Labs\01\azuredeploy30305subc.json](https://raw.githubusercontent.com/MicrosoftLearning/AZ-303-Microsoft-Azure-Architect-Technologies/master/Allfiles/Labs/05/azuredeploy30305subc.json) into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file [AZ303\AllFiles\Labs\05\azuredeploy30305subc.json](https://raw.githubusercontent.com/MicrosoftLearning/AZ-303-Microsoft-Azure-Architect-Technologies/master/Allfiles/Labs/05/azuredeploy30305subc.json) into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
 
