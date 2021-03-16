@@ -402,22 +402,22 @@ The main tasks for this exercise are as follows:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file [AZ303\AllFiles\Labs\05\azuredeploy30305subc.json](https://raw.githubusercontent.com/MicrosoftLearning/AZ-303-Microsoft-Azure-Architect-Technologies/master/Allfiles/Labs/05/azuredeploy30305subc.json) into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file [AZ303\AllFiles\Labs\05\azuredeploy30305subc.json](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305subc.json) into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
 
    ```sh
-   az deployment sub create --location '<Azure region>' --template-file azuredeploy30301subc.json --parameters rgName=az30301c-labRG rgLocation='<Azure region>'
+   az deployment sub create --location '<Azure region>' --template-file azuredeploy30305subc.json --parameters rgName=az30301c-labRG rgLocation='<Azure region>'
    ```
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgc.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template [AZ303\AllFiles\Labs\05\azuredeploy30305rgc.json] (https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305rgc.json) .
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgc.parameters.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file [AZ303\AllFiles\Labs\05\azuredeploy30305rgc.parameters.json] (https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/Lab-04/azuredeploy30305rgc.parameters.json).
 
 1. From the Cloud Shell pane, run the following to deploy an Azure Application Gateway with its backend pool consisting of a pair of Azure VMs hosting Windows Server 2019 Datacenter Core across different availability zones:
 
    ```
-   az deployment group create --resource-group az30301c-labRG --template-file azuredeploy30301rgc.json --parameters @azuredeploy30301rgc.parameters.json
+   az deployment group create --resource-group az30301c-labRG --template-file azuredeploy30305rgc.json --parameters @azuredeploy30305rgc.parameters.json
    ```
 
     > **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 10 minutes.
