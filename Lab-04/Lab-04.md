@@ -620,7 +620,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: Wait for uninstallation to complete.
 
-1. Download the file [AZ303\AllFiles\Labs\05\az30301e-configure_VMSS_with_data_disk.ps1(https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/16b1b7167ad7960d5ad978b6a7247603a76ae895/Lab-04/az30305e-configure_VMSS_with_data_disk.ps1)
+1. Download the file [AZ303\AllFiles\Labs\05\az30301e-configure_VMSS_with_data_disk.ps1](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/16b1b7167ad7960d5ad978b6a7247603a76ae895/Lab-04/az30305e-configure_VMSS_with_data_disk.ps1)
 
 1. In the Azure portal, navigate to the **az30301c-labRG** resource group blade, in the list of resources, select the storage account resource. 
 
