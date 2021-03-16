@@ -620,7 +620,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: Wait for uninstallation to complete.
 
-1. Download the file [AZ303\AllFiles\Labs\05\az30301e-configure_VMSS_with_data_disk.ps1](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/16b1b7167ad7960d5ad978b6a7247603a76ae895/Lab-04/az30305e-configure_VMSS_with_data_disk.ps1)
+1. Download the file [AZ303\AllFiles\Labs\05\az30305e-configure_VMSS_with_data_disk.ps1](https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/16b1b7167ad7960d5ad978b6a7247603a76ae895/Lab-04/az30305e-configure_VMSS_with_data_disk.ps1)
 
 1. In the Azure portal, navigate to the **az30301c-labRG** resource group blade, in the list of resources, select the storage account resource. 
 
@@ -637,7 +637,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **scripts** blade, select **Upload**.
 
-1. On the **Upload blob** blade, select the folder icon, in the **Open** dialog box, use the file **az30301e-configure_VMSS_with_data_disk.ps1**, select **Open**, and back on the **Upload blob** blade, select **Upload**. 
+1. On the **Upload blob** blade, select the folder icon, in the **Open** dialog box, use the file **az30305e-configure_VMSS_with_data_disk.ps1**, select **Open**, and back on the **Upload blob** blade, select **Upload**. 
 
 1. In the Azure portal, navigate back to the **az30301c-vmss** virtual machine scale set blade. 
 
@@ -647,7 +647,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Install extension** blade, select **Browse**. 
 
-1. On the **Storage accounts** blade, select the name of the storage account into which you uploaded the **az30301e-configure_VMSS_with_data_disk.ps1** script, on the **Containers** blade, select **scripts**, on the **scripts** blade, select **az30301e-configure_VMSS_with_data_disk.ps1**, and then select **Select**. 
+1. On the **Storage accounts** blade, select the name of the storage account into which you uploaded the **az30305e-configure_VMSS_with_data_disk.ps1** script, on the **Containers** blade, select **scripts**, on the **scripts** blade, select **az30305e-configure_VMSS_with_data_disk.ps1**, and then select **Select**. 
 
 1. Back on the **Install extension** blade, select **OK**.
 
