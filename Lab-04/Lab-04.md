@@ -327,6 +327,7 @@ The main tasks for this exercise are as follows:
 1. Wait for the update to complete and, re-run the following. to test load balancing of HTTP traffic to the Azure VMs in the backend pool of the Azure load balancer without session persistence
 
     ```sh
+    RG=AZ-303Lab-04a
     z1=$(az network public-ip show -g $RG -n Lab04b-NLBpip --query ipAddress)
     z2=${z1:$(echo `expr index "$z1" '"'`)}
     NLBip=${z2:: -1}
