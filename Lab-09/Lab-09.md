@@ -136,6 +136,8 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
 
 ### Exercise 1: Create and configure an Azure Site Recovery vault
 
+- Important Note: Please make sure you are doing these steps below on the Host Computer not on the Guest OS (2012)
+
 The main tasks for this exercise are as follows:
 
 1.  Create an Azure Site Recovery vault
@@ -144,7 +146,6 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Azure Site Recovery vault
 
--   Note: Please make sure you are doing these steps below on Host computer not Guest OS (2012)
 
 1.  Within the Remote Desktop session to **Prot-VM01**, navigate to
     the [Azure portal](https://portal.azure.com/), and sign in.
