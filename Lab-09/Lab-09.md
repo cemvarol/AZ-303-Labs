@@ -119,7 +119,7 @@ $output = "C:\Lab09\Lab09.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
 Start-Process Powershell.exe -Argumentlist "-file C:\Lab09\Lab09.ps1"
   ```
-
+> **IMPORTANT NOTE:** This step will take about 8-10 minutes. Please wait until you see Hyper-V Console
 
 6.  Open the Virtual Machine Connection window to **2012-R2** on **Hyper-V** Console
 
