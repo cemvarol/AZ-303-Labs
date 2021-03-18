@@ -144,9 +144,12 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Azure Site Recovery vault
 
+-   Note: Please make sure you are doing these steps below on Host computer not Guest OS (2012)
+
 1.  Within the Remote Desktop session to **Prot-VM01**, navigate to
     the [Azure portal](https://portal.azure.com/), and sign in.
-
+    
+    
 2.  On the **Create Recovery Services vault** blade, specify the
     following settings (leave others with their default values) and
     select **Review + create**:
