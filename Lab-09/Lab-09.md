@@ -231,6 +231,8 @@ The main tasks for this exercise are as follows:
           -  Click **Add Hyper-V Server**
       
                 -   Click download the installer to download the installer
+                    - If it does not start downloading, right click "Download" and choose **Open Link in new Tab**
+                    - If it still does not start downloading, right click "Download" and choose "save as"
       
                 -   Click the big blue button to download the registration file
 
