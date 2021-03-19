@@ -24,3 +24,5 @@
 [Additional Lab: Offline Migration](https://github.com/cemvarol/AZ-303-Labs/blob/master/OfflineMig/Instructions.md)
 
 [Additional Lab: Azure BluePrints](https://github.com/cemvarol/AZ-303-Labs/blob/master/BPLab/BPLab.md)
+
+[Additional Lab: Azure Active Directory](https://github.com/cemvarol/AZ-303-Labs/blob/master/AAD/AADLab.md)
