@@ -17,7 +17,7 @@ Install-RemoteAccess -VpnType Vpn
 
 Start-Sleep -s 3
 
-$ExternalInterface="Ethernet 2"
+$ExternalInterface="Ethernet 4"
 $InternalInterface="vEthernet (VMs)"
 
 netsh routing ip nat install
