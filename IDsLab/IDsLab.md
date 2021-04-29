@@ -57,7 +57,7 @@ When you type exit, you left the powershell session. This is needed to load the 
 
 4.  When prompted, sign in with the following credentials:
 
--   User Name: **QA**
+-   User Name: **cem**
 
 -   Password: **1q2w3e4r5t6y\***
 
