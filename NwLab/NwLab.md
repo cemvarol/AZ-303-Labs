@@ -24,6 +24,7 @@ curl -O https://raw.githubusercontent.com/cemvarol/AZ-303-Labs/master/NwLab/NwLa
 ls -la NwLab-Resources.bash
 chmod +x NwLab-Resources.bash
 ./NwLab-Resources.bash
+#
 ```
 
 ## Exercise 2: Configuring VNet peering 
