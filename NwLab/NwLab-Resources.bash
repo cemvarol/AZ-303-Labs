@@ -7,8 +7,8 @@ C=${B:: -24}
 D=$(echo "$C"rg01)
 E=$(echo "$C"rg02)
 #Provide Resource Values
-RG1=304NwLab-RG01
-RG2=304NwLab-RG02
+RG1=NwLab-RG01
+RG2=NwLab-RG02
 VNet1=VNet01
 VNet2=VNet02 
 Nsg1=NSG1
@@ -33,7 +33,7 @@ subnet12="172.16.2.0/24"
 subnet21="10.1.1.0/24"
 subnet22="10.2.2.0/24"
 #Provide VM Credentials
-user=QA
+user=cem
 pass=1q2w3e4r5t6y*
 
 #Create Resources
@@ -100,7 +100,6 @@ az network vnet subnet update -g $RG2 --vnet-name $VNet2 -n $SUBNETN4 --network-
 
 az vm create --resource-group $RG2 -n $VM3 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip3 --public-ip-address-allocation static --subnet $SUBNETID3 --boot-diagnostics-storage $E --license-type Windows_Server --nsg "" --no-wait
 az vm create --resource-group $RG2 -n $VM4 -l $L --image $OS --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip4 --public-ip-address-allocation static --subnet $SUBNETID4 --boot-diagnostics-storage $E --license-type Windows_Server --nsg ""
-
 
 
 
