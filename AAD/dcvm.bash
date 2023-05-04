@@ -14,7 +14,7 @@ VMSize=standard_D4s_v3
 Pip=$(echo "$VM"Pip)
 AP="10.207.0.0/16"
 SN01="10.207.1.0/24"
-user=QA
+user=Acuutech
 pass=1q2w3e4r5t6y*
 
 az group create -n $RG -l $L
