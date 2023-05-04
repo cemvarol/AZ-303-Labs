@@ -55,7 +55,7 @@ The main tasks for this exercise are as follows:
 
     | Setting | Value |
     | --- | --- |
-    | User Name | **QA** |
+    | User Name | **Acuutech** |
     | Password | **1q2w3e4r5t6y*** |
 
 > **Important Note:** All the actions you will follow including this step will be done on this Remote Computer's Console.
