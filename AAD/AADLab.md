@@ -8,7 +8,7 @@
 
 Windows Server admin credentials
 
--  User Name: **QA**
+-  User Name: **Acuutech**
 
 -  Password: **1q2w3e4r5t6y***
 
