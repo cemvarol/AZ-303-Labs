@@ -33,7 +33,7 @@ export SUBNETN=$(az network vnet subnet show --resource-group $RG --vnet-name $V
 
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN --network-security-group $Nsg
 
-az vm create --resource-group $RG -n $VM -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --public-ip-address-allocation static
+az vm create --resource-group $RG -n $VM -l $L --image Win2022Datacenter --admin-username $user --admin-password $pass --size $VMSize --public-ip-address $Pip --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --public-ip-address-allocation static
 
 
 
